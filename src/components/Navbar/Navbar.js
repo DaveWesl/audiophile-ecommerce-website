@@ -35,7 +35,7 @@ function Navbar() {
           </ul>
         </div>
         <div className="container">
-          <a className="navbar-brand" href="/">
+          <a className="navbar-cart" href="/">
             <img src="/assets/shared/desktop/icon-cart.svg" alt="audiophile" width="30" height="24" />
           </a>
         </div>
