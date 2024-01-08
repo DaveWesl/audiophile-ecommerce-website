@@ -1,33 +1,92 @@
 .navbar {
     background-color: rgb(20, 20, 20);
-    padding: 0.5rem 0rem;
+    padding: 0.5rem 10rem;
     border-bottom: 1px solid rgb(151, 151, 151);
-    width: 100%;
 }
 
 .container-fluid {
     display: flex;
-    gap: 3rem;
+    gap: 5rem;
     justify-content: center;
     align-items: center;
-    width: 100%;
 }
 
 .navbar-nav {
     display: flex;
     gap: 2rem;
     list-style: none;
+    padding: 0;
 }
 
-.navbar-nav a{
+.navbar-nav a,
+.tablet-menu a{
     text-decoration: none;
     color: white;
 }
 
 .navbar-brand img {
-    width: 100%;
+    width: 9rem;
 }
 
-.navbar-cart img {
-    width: 100%;
+.cart img {
+    width: 2rem;
+}
+
+.navbar-tablet {
+    display: none;
+}
+
+@media screen and (max-width: 769px) {
+
+    .navbar {
+        padding: 1rem 2rem;
+    }
+    
+    .container-fluid {
+        gap: 0;
+        justify-content: space-between;
+        align-items: start;
+    }
+
+    .navbar-tablet {
+        display: flex;
+    }
+
+    .container-logo {
+        padding-right: 35%;
+        padding-left: 5%;
+    }
+
+    .navbar-nav {
+        display: none;
+    }
+
+    .tablet-menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        text-align: start;
+        top: 3.7rem;
+        left: 0;
+        background-color: rgb(20, 20, 20);
+    }
+
+    .tablet-menu.close {
+        display: flex;
+    }
+
+    .tablet-menu a {
+        padding: 2rem;
+    }
+}
+
+@media screen and (max-width: 376px) {
+    .container-fluid {
+        justify-content: space-between;
+    }
+
+    .container-logo {
+        padding-right: 5%;
+        padding-left: 8%;
+    }
 }

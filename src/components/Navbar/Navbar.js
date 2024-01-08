@@ -1,11 +1,29 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Navbar.css';
 
 function Navbar() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = (e) => {
+    e.preventDefault();
+    setIsMenuOpen(!isMenuOpen);
+  };
+
   return ( 
     <nav className="navbar navbar-expand-lg bg-body-tertiary">
       <div className="container-fluid">
-        <div className="container">
+        <div className="navbar-tablet">
+          <a className="menu-tablet" href="/" onClick={toggleMenu}>
+            <img src="/assets/shared/tablet/icon-hamburger.svg" alt="audiophile" width="30" height="24" />
+          </a>
+          <div className={`tablet-menu ${isMenuOpen ? 'close' : ''}`}>
+            <a href="/">HOME</a>
+            <a href="/headphones">HEADPHONES</a>
+            <a href="/speakers">SPEAKERS</a>
+            <a href="/earphones">EARPHONES</a>
+          </div>
+        </div>
+        <div className="container-logo">
           <a className="navbar-brand" href="/">
             <img src="/assets/shared/desktop/logo.svg" alt="audiophile" width="30" height="24" />
           </a>
@@ -34,8 +52,8 @@ function Navbar() {
             </li>
           </ul>
         </div>
-        <div className="container">
-          <a className="navbar-cart" href="/">
+        <div className="container-cart">
+          <a className="cart" href="/">
             <img src="/assets/shared/desktop/icon-cart.svg" alt="audiophile" width="30" height="24" />
           </a>
         </div>
