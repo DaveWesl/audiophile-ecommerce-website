@@ -25,7 +25,7 @@ function Navbar() {
         </div>
         <div className="container-logo">
           <a className="navbar-brand" href="/">
-            <img src="/assets/shared/desktop/logo.svg" alt="audiophile" width="30" height="24" />
+            <img src="/assets/shared/desktop/logo.svg" alt="audiophile" />
           </a>
         </div>
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
@@ -54,7 +54,7 @@ function Navbar() {
         </div>
         <div className="container-cart">
           <a className="cart" href="/">
-            <img src="/assets/shared/desktop/icon-cart.svg" alt="audiophile" width="30" height="24" />
+            <img src="/assets/shared/desktop/icon-cart.svg" alt="audiophile"/>
           </a>
         </div>
       </div>

@@ -1,0 +1,61 @@
+footer {
+    background-color: rgb(20, 20, 20);
+    padding: 4rem 10rem 2rem 10rem;
+    color: rgb(168, 168, 168);
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    text-align: start;
+}
+
+.footer-links ul {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    margin: 0;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: white;
+    letter-spacing: 0.0625rem;
+    font-size: 0.8rem;
+}
+
+.footer-links a:hover {
+    color: rgba(216, 125, 74, 1);
+}
+
+.footer-brand {
+    order: 1;
+}
+
+.footer-links {
+    order: 2; 
+    justify-self: end;
+}
+
+.Audiophile {
+    order: 3;
+}
+
+.copyright {
+    order: 5; 
+}
+
+.logos {
+    order: 4;
+    align-self: center;
+    justify-self: end;
+}
+
+.social-media-list {
+    display: flex;
+    gap: 1rem;
+}
+
+@media screen and (max-width: 1000px) {
+
+}
