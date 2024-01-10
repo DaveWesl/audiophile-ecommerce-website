@@ -1,6 +1,6 @@
 footer {
     background-color: rgb(20, 20, 20);
-    padding: 4rem 10rem 2rem 10rem;
+    padding: 4rem 10rem 3rem 10rem;
     color: rgb(168, 168, 168);
 }
 
@@ -14,6 +14,7 @@ footer {
     display: flex;
     flex-direction: row;
     gap: 1rem;
+    padding: 0;
     margin: 0;
 }
 
@@ -28,8 +29,12 @@ footer {
     color: rgba(216, 125, 74, 1);
 }
 
+.footer-logo:hover .svg-icon path {
+    fill: rgb(216, 125, 74);
+}
 .footer-brand {
     order: 1;
+    padding-bottom: 2rem;
 }
 
 .footer-links {
@@ -39,10 +44,14 @@ footer {
 
 .Audiophile {
     order: 3;
+    margin: 0;
+    padding-bottom: 2rem;
 }
 
 .copyright {
     order: 5; 
+    margin: 0;
+    font-weight: bold;
 }
 
 .logos {
@@ -54,8 +63,67 @@ footer {
 .social-media-list {
     display: flex;
     gap: 1rem;
+    padding: 0;
+    margin: 0;
 }
 
 @media screen and (max-width: 1000px) {
+    footer {
+        padding: 4rem 2rem 3rem 2rem;
+    }
 
+    .footer-brand {
+        order: 1;
+        grid-column: span 2;
+        padding-bottom: 2rem;
+    }
+    
+    .footer-links {
+        order: 2; 
+        grid-column: span 2;
+        justify-self: start;
+        padding-bottom: 2rem;
+    }
+    
+    .Audiophile {
+        order: 3;
+        grid-column: span 2;
+        padding-bottom: 3rem;
+    }
+    
+    .copyright {
+        order: 4; 
+        padding-bottom: 0rem;
+    }
+    
+    .logos {
+        order: 5;
+        align-self: center;
+        justify-self: end;
+    }
+}
+
+@media screen and (max-width: 590px) {
+    .footer-container {
+        text-align: center;
+    }
+    
+    .footer-links {
+        justify-self: center;
+    }
+
+    .footer-links ul {
+        flex-direction: column;
+    }
+    
+    .copyright {
+        grid-column: span 2;
+        padding-bottom: 2rem;
+    }
+    
+    .logos {
+        grid-column: span 2;
+        align-self: center;
+        justify-self: center;
+    }
 }
