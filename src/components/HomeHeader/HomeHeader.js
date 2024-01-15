@@ -13,7 +13,7 @@ function HomeHeader() {
         </h1>
         <p className="Experience">Experience natural, lifelike audio and exceptional build quality made for the passionate music enthusiast.</p>
         <button className="button-1 see-product">SEE PRODUCT</button>
-      </div>  
+      </div>    
     </div>
   );
 }

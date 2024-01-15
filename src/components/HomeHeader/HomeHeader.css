@@ -22,10 +22,11 @@
     padding-bottom: 2rem;
 }
 
-@media screen and (max-width: 1450px) {
+@media screen and (max-width: 1100px) {
 
     .home-header {
         background-image: url(/public/assets/home/tablet/image-header.jpg);
+        background-position: right center;
         justify-content: center;
         align-items: center;
     }
