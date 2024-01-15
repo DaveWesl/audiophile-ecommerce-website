@@ -35,7 +35,7 @@ function Bringing() {
         <div className="img-container">
             <img className="img-guy" 
             src={
-                windowWidth < 352
+                windowWidth < 591
                   ? '/assets/shared/mobile/image-best-gear.jpg'
                   : windowWidth <= 1100
                   ? '/assets/shared/tablet/image-best-gear.jpg'

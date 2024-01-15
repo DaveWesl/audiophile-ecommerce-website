@@ -28,19 +28,31 @@
     .last-section {
         display: flex;
         flex-direction: column;
-        padding: 3rem 8rem;
+        padding: 3rem 2rem;
         align-items: center;
     }
 
     .img-container {
         order: 0;
+        text-align: center;
+        width: 100%;
     }
 
     .last-section .text {
         order: 1;
+        text-align: center;
+        width: 100%;
+        padding: 2rem 0;
     }
 
     .img-container img {
         width: 100%;
+    }
+}
+
+@media screen and (max-width: 590px) {
+
+    .last-section .text {
+        padding: 2rem 0 4rem 0;
     }
 }
