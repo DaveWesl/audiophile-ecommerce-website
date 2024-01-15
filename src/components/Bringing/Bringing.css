@@ -28,7 +28,6 @@
     .last-section {
         display: flex;
         flex-direction: column;
-        padding: 3rem 2rem;
         align-items: center;
     }
 
@@ -47,6 +46,13 @@
 
     .img-container img {
         width: 100%;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+
+    .last-section {
+        padding: 3rem 2rem;
     }
 }
 

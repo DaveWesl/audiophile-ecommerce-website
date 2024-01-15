@@ -4,7 +4,6 @@ html {
 
 .App {
   box-sizing: border-box;
-  text-align: center;
   width: 100%;
   font-family: 'Manrope', sans-serif;
   color: rgba(0, 0, 0, 1);
@@ -20,6 +19,7 @@ h1 {
   line-height: 3.625rem;
   letter-spacing: 0.125rem;
   text-transform: uppercase;
+  color: rgba(255, 255, 255, 1);
 }
 
 h2 {
@@ -68,8 +68,7 @@ h6 {
   line-height: 1.1875rem;
   letter-spacing: 0.625rem;
   text-transform: uppercase;
-  text-decoration: overline;
-  color: rgba(216, 125, 74, 1);
+  color: rgba(255, 255, 255, 1);
 }
 
 .subtitle {
@@ -86,4 +85,17 @@ p {
   font-weight: medium;
   font-size: 0.9375rem;
   line-height: 1.5625rem; 
+}
+
+.button-1 {
+  width: 10rem;
+  height: 3rem;
+  background-color: #d87d4a;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.button-1:hover {
+  background-color: rgba(251, 175, 133, 1);
 }

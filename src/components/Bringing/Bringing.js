@@ -13,8 +13,7 @@ function Bringing() {
       return () => {
         window.removeEventListener('resize', handleResize);
       };
-    }, []);  
-    console.log(window.innerWidth)
+    }, []);
   return (
       <div className="last-section">
         <div className="text">
