@@ -95,8 +95,27 @@ p {
   color: white;
   border: none;
   cursor: pointer;
+  font-weight: bold;
 }
 
 .button-1:hover {
   background-color: rgba(251, 175, 133, 1);
+  font-weight: bold;
+}
+
+.button-2 {
+  width: 10rem;
+  height: 3rem;
+  background-color: rgba(0, 0, 0, 0);
+  color: black;
+  cursor: pointer;
+  border: 1px solid;
+  border-color: #000000;
+  font-weight: bold;
+}
+
+.button-2:hover {
+  background-color: rgba(0, 0, 0, 1);
+  color: white;
+  font-weight: bold;
 }

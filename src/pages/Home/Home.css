@@ -1,0 +1,15 @@
+.button-2-zx9 {
+    width: 10rem;
+    height: 3rem;
+    background-color: rgba(0, 0, 0, 1);
+    color: white;
+    cursor: pointer;
+    border: none;
+    font-weight: bold;
+  }
+  
+  .button-2-zx9:hover {
+    background-color: rgba(76, 76, 76, 1);
+    color: white;
+    font-weight: bold;
+  }
