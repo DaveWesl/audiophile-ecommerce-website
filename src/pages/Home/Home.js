@@ -10,6 +10,7 @@ function Home() {
       <PreviewSmall />
       <div className="home-presentation">
         <div className="home-zx9">
+          <div class="oval-copy"></div>
           <img className="home-img-zx9 home-img" src="/assets/home/desktop/image-speaker-zx9.png" alt="ZX9 Speaker"/>
           <div className="home-text-zx9">
             <h1 className="home-h1">ZX9 SPEAKER</h1>

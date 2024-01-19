@@ -1,23 +1,56 @@
+.home-presentation {
+  padding: 0 8rem 9rem 8rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.home-zx9 {
+  background-color: rgba(216, 125, 74, 1);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
 .button-2-zx9 {
-    width: 10rem;
-    height: 3rem;
-    background-color: rgba(0, 0, 0, 1);
-    color: white;
-    cursor: pointer;
-    border: none;
-    font-weight: bold;
-  }
+  width: 10rem;
+  height: 3rem;
+  background-color: rgba(0, 0, 0, 1);
+  color: white;
+  cursor: pointer;
+  border: none;
+  font-weight: bold;
+}
   
-  .button-2-zx9:hover {
-    background-color: rgba(76, 76, 76, 1);
-    color: white;
-    font-weight: bold;
-  }
+.button-2-zx9:hover {
+  background-color: rgba(76, 76, 76, 1);
+  color: white;
+  font-weight: bold;
+}
 
-  .home-img {
-    width: 15rem;
-  }
+.home-p {
+  width: 70%;
+  color: white;
+}
 
-  .home-img-zx7 {
-    width: 100%;
+.home-text-zx9 {
+  width: 50%;
+}
+
+.home-img-zx9 {
+  width: 30%;
+  padding: 4rem 6rem 0 6rem;
+}
+
+.oval-copy {
+  position: static;
+  width: 944px;
+  height: 944px;
+  top: 0;
+  left: 0;
+  border-radius: 472px;
+  border: 1px solid;
+  border-color: #ffffff;
+  z-index: 0;
   }
