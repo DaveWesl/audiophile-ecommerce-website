@@ -11,6 +11,7 @@
   justify-content: center;
   align-items: center;
   width: 100%;
+  overflow: hidden;
 }
 
 .button-2-zx9 {
@@ -32,25 +33,183 @@
 .home-p {
   width: 70%;
   color: white;
+  padding-bottom: 2rem;
 }
 
 .home-text-zx9 {
-  width: 50%;
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  z-index: 2;
+  padding-right: 2rem;
+}
+
+.home-container-zx9 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  width: 60%;
+}
+
+.home-img-zx7,
+.home-img-yx1 {
+  width: 40%;
 }
 
 .home-img-zx9 {
-  width: 30%;
-  padding: 4rem 6rem 0 6rem;
+  position: relative;
+  width: 55%;
+  padding-top: 5rem;
+  z-index: 2;
+  top: 1rem;
 }
 
 .oval-copy {
-  position: static;
-  width: 944px;
-  height: 944px;
-  top: 0;
-  left: 0;
-  border-radius: 472px;
+  position: absolute;
+  border-radius: 50%;
   border: 1px solid;
-  border-color: #ffffff;
-  z-index: 0;
+  border-color: rgb(255, 255, 255, 0.4);
+  z-index: 1;
   }
+
+.oval-copy-1 {
+  width: 55rem;
+  height: 55rem;
+  bottom: -20rem;
+  left: -8rem;
+}
+
+.oval-copy-2 {
+  width: 30rem;
+  height: 30rem;
+  bottom: -5rem;
+  left: 4rem;
+}
+
+.oval-copy-3 {
+  width: 25rem;
+  height: 25rem;
+  bottom: -2.5rem;
+  left: 6.5rem;
+}
+
+@media screen and (max-width: 1100px) {
+
+  .home-zx9 {
+    flex-direction: column;
+  }
+
+  .home-img-zx9 {
+    width: 50%;
+    top: 0;
+    padding-bottom: 5rem;
+  }
+
+  .home-text-zx9 {
+    width: 50%;
+    padding-right: 0;
+    text-align: center;
+    align-items: center;
+    padding-bottom: 4rem;
+  }
+
+  .home-h1 {
+    margin-top: 0;
+  }
+
+  .home-p {
+    width: 80%;
+  }
+
+  .oval-copy-1 {
+    width: 70rem;
+    height: 70rem;
+    bottom: -50%;
+    left: -50%;
+  }
+  
+  .oval-copy-2 {
+    width: 40rem;
+    height: 40rem;
+    bottom: -15%;
+    left: -10%;
+  }
+  
+  .oval-copy-3 {
+    width: 35rem;
+    height: 35rem;
+    bottom: -7%;
+    left: -2.5%;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+
+  .home-presentation {
+    padding: 0 2rem 9rem 2rem;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .oval-copy-1 {
+    width: 60rem;
+    height: 60rem;
+    bottom: -50%;
+    left: -70%;
+  }
+  
+  .oval-copy-2 {
+    width: 30rem;
+    height: 30rem;
+    bottom: -15%;
+    left: -13%;
+  }
+  
+  .oval-copy-3 {
+    width: 25rem;
+    height: 25rem;
+    bottom: -5%;
+    left: -2.5%;
+  }
+}
+
+@media screen and (max-width: 590px) {
+
+  .home-h1 {
+    font-size: 2rem;
+  }
+
+  .home-img-zx9 {
+    width: 90%;
+  }
+
+  .home-text-zx9 {
+    width: 80%;
+  }
+  
+  .home-p {
+    width: 100%;
+  }
+
+  .oval-copy-1 {
+    width: 60rem;
+    height: 60rem;
+    bottom: -40%;
+    left: -120%;
+  }
+  
+  .oval-copy-2 {
+    width: 30rem;
+    height: 30rem;
+    bottom: -3%;
+    left: -35%;
+  }
+  
+  .oval-copy-3 {
+    width: 25rem;
+    height: 25rem;
+    bottom: 5%;
+    left: -20%;
+  }
+}
