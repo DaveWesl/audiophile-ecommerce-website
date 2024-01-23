@@ -2,6 +2,7 @@ import React from "react";
 import "./Home.css";
 import HomeHeader from "../../components/HomeHeader/HomeHeader";
 import PreviewSmall from "../../components/PreviewSmall/PreviewSmall";
+import Bringing from '../../components/Bringing/Bringing';
 
 function Home() {
   return (
@@ -38,6 +39,7 @@ function Home() {
           </div>
         </div>
       </div>
+      <Bringing className="App-bringing" />
     </div>
   );
 }
