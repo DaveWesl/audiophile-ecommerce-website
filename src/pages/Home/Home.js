@@ -28,11 +28,10 @@ function Home() {
             <h3 className="home-h1">ZX7 SPEAKER</h3>
             <button className="button-2 button-2-zx7">SEE PRODUCT</button>
           </div>
-          <img className="home-img-zx7 home-img" src="/assets/home/desktop/image-speaker-zx7.jpg" alt="ZX7 Speaker"/>
         </div>
 
         <div className="home-yx1">
-          <img className="home-img-yx1 home-img" src="/assets/home/desktop/image-earphones-yx1.jpg" alt="YX1 Speaker"/>
+          <div className="home-img-yx1 home-img"></div>
           <div className="home-text-yx1">
             <h3 className="home-h1">YX1 EARPHONES</h3>
             <button className="button-2 button-2-yx1">SEE PRODUCT</button>
