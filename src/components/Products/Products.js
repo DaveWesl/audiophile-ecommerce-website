@@ -14,6 +14,10 @@ function Products(props) {
             <h3 className='product-h3'>{heading}</h3>
             <p className='product-p'>{description}</p>
             <button className='button-1'>SEE PRODUCT</button>
+            <div className='product-cart'>
+                <input></input>
+                <button className='button-1'>ADD TO CART</button>
+            </div>
           </div>
         </>
       ) : (
