@@ -81,11 +81,13 @@ h6 {
   color: rgba(216, 125, 74, 1);
 }
 
-p {
+p,
+li {
   font-family: 'Manrope', sans-serif;
   font-weight: medium;
   font-size: 0.9375rem;
   line-height: 1.5625rem; 
+  color: rgba(0, 0, 0, 0.5);
 }
 
 .button-1 {
