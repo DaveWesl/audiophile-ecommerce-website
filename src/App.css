@@ -122,5 +122,23 @@ p {
 }
 
 .button-back {
-  
+  background-color: white;
+  cursor: pointer;
+  border: none;
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 0.9rem;
+  padding: 4rem 8rem 0 8rem;
 }
+
+.button-back:hover {
+  color: rgba(216, 125, 74, 1);
+}
+
+@media screen and (max-width: 1000px) {
+
+  .button-back {
+      padding: 4rem 2rem 0 2rem;
+  }
+}
+
+

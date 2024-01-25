@@ -1,7 +1,7 @@
 .product {
     display: flex;
     flex-direction: row;
-    padding: 6rem 8rem 0 8rem;
+    padding: 3rem 8rem 0 8rem;
     gap: 5rem;
 }
 
@@ -69,6 +69,7 @@
 
 .product-button-1 {
     color: rgba(0, 0, 0, 0.5);
+    cursor: pointer;
 }
 
 .product-button-1:hover {
