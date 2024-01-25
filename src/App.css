@@ -93,6 +93,7 @@ p {
   height: 3rem;
   background-color: #d87d4a;
   color: white;
+  text-transform: uppercase;
   border: none;
   cursor: pointer;
   font-weight: bold;
@@ -118,4 +119,8 @@ p {
   background-color: rgba(0, 0, 0, 1);
   color: white;
   font-weight: bold;
+}
+
+.button-back {
+  
 }

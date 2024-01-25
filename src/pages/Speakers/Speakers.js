@@ -39,6 +39,7 @@ function Speakers() {
         heading='ZX7 SPEAKER'
         description='Stream high quality sound wirelessly with minimal loss. The ZX7 bookshelf speaker uses high-end audiophile components that represents the top of the line powered speakers for home or studio use.'
         displayImageFirst={displayImageFirst}
+        buttonSeeProduct={true}
       />
 
       <PreviewSmall />

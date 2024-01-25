@@ -1,8 +1,24 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Products.css';
 
 function Products(props) {
-  const { imgSrc, overline, heading, description, displayImageFirst } = props;
+  const { imgSrc, overline, heading, description, displayImageFirst, buttonSeeProduct } = props;
+  const [quantity, setQuantity] = useState(1);
+
+  function increaseQuantity() {
+    setQuantity(prevQuantity => prevQuantity + 1);
+  }
+
+  function decreaseQuantity() {
+    if (quantity > 1) {
+      setQuantity(prevQuantity => prevQuantity - 1);
+    }
+  }
+
+  function handleSubmit(event) {
+    event.preventDefault();
+    console.log('Adding', quantity, 'to cart...');
+  }
 
   return ( 
     <div className='product'>
@@ -13,11 +29,21 @@ function Products(props) {
             <div className="product-overline">{overline}</div>
             <h3 className='product-h3'>{heading}</h3>
             <p className='product-p'>{description}</p>
+            {buttonSeeProduct ? (
             <button className='button-1'>SEE PRODUCT</button>
+            ) : ( 
             <div className='product-cart'>
-                <input></input>
-                <button className='button-1'>ADD TO CART</button>
+              <h6 className='product-h4'>$ 2,999</h6>
+              <form className='product-form' onSubmit={handleSubmit}>
+                <div className="product-quantity">
+                    <button className='product-button product-button-1' type="button" onClick={decreaseQuantity}>-</button>
+                    <input className='product-button product-input' type="number" id="quantity" name="quantity" value={quantity} min="1" onChange={(e) => setQuantity(parseInt(e.target.value))} />
+                    <button className='product-button product-button-1' type="button" onClick={increaseQuantity}>+</button>
+                </div>
+                <input className='button-1' type="submit" value="Add to Cart" />
+              </form>
             </div>
+            )}
           </div>
         </>
       ) : (
