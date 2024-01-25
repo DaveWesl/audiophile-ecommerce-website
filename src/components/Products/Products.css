@@ -114,4 +114,8 @@
     .product-p {
         width: 90%;
     }
+
+    .product-button {
+        width: 2rem;
+    }
 }
