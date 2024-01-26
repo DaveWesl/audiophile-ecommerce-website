@@ -3,6 +3,8 @@ import Products from '../../components/Products/Products';
 import PreviewSmall from '../../components/PreviewSmall/PreviewSmall';
 import Bringing from '../../components/Bringing/Bringing';
 import Features from '../../components/Features/Features';
+import Images from '../../components/Images/Images';
+import Youmayalso from '../../components/Youmayalso/Youmayalso';
 
 function MarkTwo() {
     return ( 
@@ -30,6 +32,27 @@ function MarkTwo() {
                 feature3='User Manual'
                 feature4='3.5mm 5m Audio Cable'
                 feature5='Travel Bag'
+            />
+
+            <Images 
+                imagesImg1='/assets/product-xx99-mark-two-headphones\desktop/image-gallery-1.jpg'
+                imagesImg2='/assets/product-xx99-mark-two-headphones\desktop/image-gallery-2.jpg'
+                imagesImg3='/assets/product-xx99-mark-two-headphones\desktop/image-gallery-3.jpg'
+                imagesImgAlt1='men hearing music'
+                imagesImgAlt2='Headphones on table'
+                imagesImgAlt3='Headphones Mark 2'
+            />
+
+            <Youmayalso 
+                YoumayalsoImg1='/assets/shared/tablet/image-xx99-mark-one-headphones.jpg'
+                YoumayalsoImg2='/assets/shared/tablet/image-xx59-headphones.jpg'
+                YoumayalsoImg3='/assets/shared/tablet/image-zx9-speaker.jpg' 
+                YoumayalsoImgAlt1='mark one headphones'
+                YoumayalsoImgAlt2='xx59 headphones'
+                YoumayalsoImgAlt3='zx9 speaker'   
+                YoumayalsoProduct1='XX99 MARK I'
+                YoumayalsoProduct2='XX59'
+                YoumayalsoProduct3='ZX9 SPEAKER'         
             />
 
             <PreviewSmall />

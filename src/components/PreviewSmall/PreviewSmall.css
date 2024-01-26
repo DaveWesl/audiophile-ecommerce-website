@@ -1,7 +1,7 @@
 .preview-small {
     display: flex;
     flex-direction: row;
-    padding: 9rem 8rem;
+    padding: 10rem 8rem 8rem 8rem;
     align-items: center;
     justify-content: space-between;
     gap: 2rem;
@@ -46,7 +46,7 @@
 @media screen and (max-width: 1000px) {
 
     .preview-small {
-        padding: 9rem 2rem;
+        padding: 10rem 2rem 8rem 2rem;
     }
 
 }
@@ -54,7 +54,6 @@
 @media screen and (max-width: 620px) {
 
     .preview-small {
-        padding: 8rem 2rem;
         flex-direction: column;
         gap: 5rem;
     }

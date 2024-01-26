@@ -8,11 +8,11 @@ function Features(props) {
     return ( 
         <div className='features'>
             <div className='features-text'>
-                <h5 className='features-h5'>FEATURES</h5>
+                <h4 className='features-h4'>FEATURES</h4>
                 <p className='features-p'>{featuresText1}<br></br><br></br>{featuresText2}</p>
             </div>
             <div className='features-box'>
-                <h5 className='features-h5'>IN THE BOX</h5>
+                <h4 className='features-h4'>IN THE BOX</h4>
                 <ul className='features-list'>
                     <div className='features-li'><li className='features-list-1'>{featuresQuantity1}</li><li className='features-list-2'>{feature1}</li></div>
                     <div className='features-li'><li className='features-list-1'>{featuresQuantity2}</li><li className='features-list-2'>{feature2}</li></div>

@@ -1,0 +1,49 @@
+.youmayalso {
+    padding: 8rem 8rem 0 8rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.youmayalso-h4 {
+    margin: 0 0 3rem 0;
+}
+
+.youmayalso-images {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;    
+}
+
+.youmayalso-product {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.youmayalso-h5 {
+    margin: 2rem 0;
+}
+
+.youmayalso-image {
+    width: 100%;
+}
+
+@media screen and (max-width: 1000px) {
+    
+    .youmayalso {
+        padding: 5rem 2rem 0 2rem;
+    }
+}
+
+@media screen and (max-width: 670px) {
+
+    .youmayalso-images {
+        grid-template-columns: 1fr 1fr;
+    }
+
+}
