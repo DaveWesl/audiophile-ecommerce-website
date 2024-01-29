@@ -11,18 +11,20 @@
 }
 
 .youmayalso-images {
-    display: grid;
-    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
     align-items: center;
-    grid-template-columns: repeat(3, 1fr);
     gap: 2rem;    
 }
 
 .youmayalso-product {
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
+    width: 25%;
 }
 
 .youmayalso-h5 {
@@ -40,10 +42,23 @@
     }
 }
 
-@media screen and (max-width: 670px) {
-
-    .youmayalso-images {
-        grid-template-columns: 1fr 1fr;
+@media screen and (max-width: 800px) {
+    .youmayalso-product {
+        width: 30%;
     }
 
+}
+
+@media screen and (max-width: 670px) {
+    .youmayalso-images {
+        flex-direction: column;
+    }   
+
+    .youmayalso-image {
+        width: 80%;
+    }
+
+    .youmayalso-product {
+        width: 100%;
+    }
 }

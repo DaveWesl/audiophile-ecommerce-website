@@ -111,6 +111,10 @@
 
 @media screen and (max-width: 490px) {
 
+    .product {
+        padding: 3rem 2rem 0 2rem;
+    }
+
     .product-p {
         width: 90%;
     }
