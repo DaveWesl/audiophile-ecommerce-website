@@ -44,9 +44,9 @@ function MarkTwo() {
             />
 
             <Youmayalso 
-                YoumayalsoImg1='/assets/shared/tablet/image-xx99-mark-one-headphones.jpg'
-                YoumayalsoImg2='/assets/shared/tablet/image-xx59-headphones.jpg'
-                YoumayalsoImg3='/assets/shared/tablet/image-zx9-speaker.jpg' 
+                YoumayalsoImg1='/assets/shared/desktop/image-xx99-mark-one-headphones.jpg'
+                YoumayalsoImg2='/assets/shared/desktop/image-xx59-headphones.jpg'
+                YoumayalsoImg3='/assets/shared/desktop/image-zx9-speaker.jpg' 
                 YoumayalsoImgAlt1='mark one headphones'
                 YoumayalsoImgAlt2='xx59 headphones'
                 YoumayalsoImgAlt3='zx9 speaker'   

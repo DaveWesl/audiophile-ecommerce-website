@@ -24,7 +24,7 @@
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    width: 25%;
+    width: 30%;
 }
 
 .youmayalso-h5 {
@@ -44,19 +44,27 @@
 
 @media screen and (max-width: 800px) {
     .youmayalso-product {
-        width: 30%;
+        width: 45%;
     }
 
 }
 
-@media screen and (max-width: 670px) {
+@media screen and (max-width: 660px) {
+
     .youmayalso-images {
         flex-direction: column;
     }   
 
-    .youmayalso-image {
-        width: 80%;
+    .youmayalso-product {
+        width: 40%;
     }
+}
+
+@media screen and (max-width: 480px) {
+
+    .youmayalso-images {
+        flex-direction: column;
+    }   
 
     .youmayalso-product {
         width: 100%;
