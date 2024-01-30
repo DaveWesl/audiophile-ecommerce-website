@@ -17,6 +17,7 @@ function MarkTwo() {
               heading='XX99 Mark II Headphones'
               description='The new XX99 Mark II headphones is the pinnacle of pristine audio. It redefines your premium headphone experience by reproducing the balanced depth and precision of studio-quality sound.'
               displayImageFirst={true}
+              price='$ 2,999'
             />
 
             <Features 

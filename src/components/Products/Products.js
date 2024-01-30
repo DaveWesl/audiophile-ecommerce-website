@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './Products.css';
 
 function Products(props) {
-  const { imgSrc, overline, heading, description, displayImageFirst, buttonSeeProduct } = props;
+  const { imgSrc, overline, heading, description, displayImageFirst, buttonSeeProduct, price } = props;
   const [quantity, setQuantity] = useState(1);
 
   function increaseQuantity() {
@@ -33,7 +33,7 @@ function Products(props) {
             <button className='button-1'>SEE PRODUCT</button>
             ) : ( 
             <div className='product-cart'>
-              <h6 className='product-h4'>$ 2,999</h6>
+              <h6 className='product-h4'>{price}</h6>
               <form className='product-form' onSubmit={handleSubmit}>
                 <div className="product-quantity">
                     <button className='product-button product-button-1' type="button" onClick={decreaseQuantity}>-</button>
