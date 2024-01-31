@@ -79,7 +79,7 @@
 @media screen and (max-width: 1000px) {
 
     .product {
-        padding: 4rem 2rem 0 2rem;
+        padding: 2rem 2rem 0 2rem;
     }
 }
 
@@ -112,7 +112,7 @@
 @media screen and (max-width: 490px) {
 
     .product {
-        padding: 3rem 2rem 0 2rem;
+        padding: 2rem 2rem 0 2rem;
     }
 
     .product-p {
