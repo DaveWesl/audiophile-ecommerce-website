@@ -1,5 +1,6 @@
 import React from 'react';
 import './Footer.css';
+import { Link } from 'react-router-dom'
 
 function Footer() {
     return ( 
@@ -10,10 +11,10 @@ function Footer() {
             </a>
             <div className='footer-links'>
                 <ul>
-                  <li><a href="/">HOME</a></li>
-                  <li><a href="/">HEADPHONES</a></li>
-                  <li><a href="/">SPEAKERS</a></li>
-                  <li><a href="/">EARPHONES</a></li>
+                  <li><Link to='/' href="/">HOME</Link></li>
+                  <li><Link to='/headphones'>HEADPHONES</Link></li>
+                  <li><Link to='/speakers'>SPEAKERS</Link></li>
+                  <li><Link to='/earphones'>EARPHONES</Link></li>
                 </ul>
             </div>
             <p className='Audiophile'>Audiophile is an all in one stop to fulfill your audio needs. We're a small team of music lovers and sound specialists who are devoted to helping you get the most out of personal audio. Come and visit our demo facility - we're open 7 days a week.</p>

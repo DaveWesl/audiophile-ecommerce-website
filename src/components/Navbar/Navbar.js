@@ -29,31 +29,31 @@ function Navbar({ onPageChange }) {
           </div>
         </div>
         <div className="container-logo">
-          <a className="navbar-brand" href="/">
+            <Link to='/' className="navbar-brand">
             <img src="/assets/shared/desktop/logo.svg" alt="audiophile" />
-          </a>
+          </Link>
         </div>
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
             <li className="nav-item">
-              <a className="nav-link active" aria-current="page" href="/">
+              <Link to="/" className="nav-link active" aria-current="page" href="/">
                 HOME
-              </a>
+              </Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="/">
+              <Link to="/headphones" className="nav-link" href="/">
                 HEADPHONES
-              </a>
+              </Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="/">
+              <Link to="/speakers" className="nav-link" href="/">
                 SPEAKERS
-              </a>
+              </Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="/">
+              <Link to="/earphones" className="nav-link" href="/">
                 EARPHONES
-              </a>
+              </Link>
             </li>
           </ul>
         </div>

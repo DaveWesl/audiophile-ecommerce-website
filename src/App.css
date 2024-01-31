@@ -99,6 +99,10 @@ li {
   border: none;
   cursor: pointer;
   font-weight: bold;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .button-1:hover {
@@ -115,6 +119,10 @@ li {
   border: 1px solid;
   border-color: #000000;
   font-weight: bold;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .button-2:hover {

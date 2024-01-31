@@ -1,5 +1,6 @@
 import React from "react";
 import "./HomeHeader.css";
+import { Link } from 'react-router-dom'
 
 function HomeHeader() {
   return (
@@ -13,7 +14,7 @@ function HomeHeader() {
             HEADPHONES
           </h1>
           <p className="Experience">Experience natural, lifelike audio and exceptional build quality made for the passionate music enthusiast.</p>
-          <button className="button-1 see-product">SEE PRODUCT</button>
+          <Link to='/marktwo' className="button-1 see-product">SEE PRODUCT</Link>
         </div>    
       </div>
     </div>

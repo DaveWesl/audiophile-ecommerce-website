@@ -18,6 +18,7 @@ function Earphones() {
         description='Tailor your listening experience with bespoke dynamic drivers from the new YX1 Wireless Earphones. Enjoy incredible high-fidelity sound even in noisy environments with its active noise cancellation feature.'
         displayImageFirst={true}
         buttonSeeProduct={true}
+        productUrl='/yx1'
       />
 
       <PreviewSmall />

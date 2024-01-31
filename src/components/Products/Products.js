@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom'
 import './Products.css';
 
 function Products(props) {
-  const { imgSrc, overline, heading, description, displayImageFirst, buttonSeeProduct, price } = props;
+  const { imgSrc, overline, heading, description, displayImageFirst, buttonSeeProduct, price, productUrl } = props;
   const [quantity, setQuantity] = useState(1);
 
   function increaseQuantity() {
@@ -30,7 +31,7 @@ function Products(props) {
             <h3 className='product-h3'>{heading}</h3>
             <p className='product-p'>{description}</p>
             {buttonSeeProduct ? (
-            <button className='button-1'>SEE PRODUCT</button>
+            <Link to={productUrl} className='button-1'>SEE PRODUCT</Link>
             ) : ( 
             <div className='product-cart'>
               <h6 className='product-h4'>{price}</h6>
