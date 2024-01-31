@@ -5,11 +5,12 @@ import Bringing from '../../components/Bringing/Bringing';
 import Features from '../../components/Features/Features';
 import Images from '../../components/Images/Images';
 import Youmayalso from '../../components/Youmayalso/Youmayalso';
+import { Link } from 'react-router-dom'
 
 function YX1() {
     return ( 
-        <div className="Headphones">
-            <button className='button-back'>Go Back</button>
+        <div className="yx1">
+            <Link to='/earphones' className='button-back'>Go Back</Link>
             
             <Products
               imgSrc='/assets/product-yx1-earphones/desktop/image-product.jpg'
@@ -53,7 +54,10 @@ function YX1() {
                 YoumayalsoImgAlt3='ZX9 Speaker'   
                 YoumayalsoProduct1='XX99 Mark I'
                 YoumayalsoProduct2='XX59'
-                YoumayalsoProduct3='ZX9 Speaker'         
+                YoumayalsoProduct3='ZX9 Speaker' 
+                YoumayalsoUrl1='/markone'
+                YoumayalsoUrl2='/xx59'
+                YoumayalsoUrl3='/zx9'        
             />
 
             <PreviewSmall />

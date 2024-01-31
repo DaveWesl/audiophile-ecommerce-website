@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import { Link } from 'react-router-dom';
 import "./Headphones.css";
 import PreviewSmall from "../../components/PreviewSmall/PreviewSmall";
 import Bringing from '../../components/Bringing/Bringing';

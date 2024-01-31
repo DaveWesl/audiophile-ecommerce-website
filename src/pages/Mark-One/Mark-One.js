@@ -5,11 +5,12 @@ import Bringing from '../../components/Bringing/Bringing';
 import Features from '../../components/Features/Features';
 import Images from '../../components/Images/Images';
 import Youmayalso from '../../components/Youmayalso/Youmayalso';
+import { Link } from 'react-router-dom'
 
 function MarkOne() {
     return ( 
-        <div className="Headphones">
-            <button className='button-back'>Go Back</button>
+        <div className="markone">
+            <Link to='/headphones' className='button-back'>Go Back</Link>
             
             <Products
               imgSrc='/assets/shared/desktop/image-xx99-mark-one-headphones.jpg'
@@ -51,7 +52,10 @@ function MarkOne() {
                 YoumayalsoImgAlt3='zx9 speaker'   
                 YoumayalsoProduct1='XX99 MARK II'
                 YoumayalsoProduct2='XX59'
-                YoumayalsoProduct3='ZX9 SPEAKER'         
+                YoumayalsoProduct3='ZX9 SPEAKER'   
+                YoumayalsoUrl1='/marktwo'
+                YoumayalsoUrl2='/xx59'
+                YoumayalsoUrl3='/zx9'      
             />
 
             <PreviewSmall />

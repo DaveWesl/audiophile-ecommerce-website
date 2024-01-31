@@ -5,14 +5,14 @@
     align-items: center;
     justify-content: flex-start;
     background-color: rgb(26,26,26);
-}
-
-.home-headphones {
-    width: 100%;
     background-image: url(/public/assets/home/desktop/image-hero.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: right bottom;
+}
+
+.home-headphones {
+    width: 100%;
     padding: 4rem 0;
 }
 
@@ -28,7 +28,7 @@
 }
 
 .Experience {
-    color: #ffffff;
+    color: rgb(255, 255, 255, 0.7);
     width: 30%;
     padding-bottom: 2rem;
 }
@@ -39,12 +39,14 @@
         justify-content: center;
         align-items: center;
         padding: 0rem 2rem;
+        background-image: none;
     }
 
     .home-headphones {
         background-image: url(/public/assets/home/tablet/image-header.jpg);
         background-position: center top;
         background-size: contain;
+        background-repeat: no-repeat;
         padding: 5rem 0;
     }
 

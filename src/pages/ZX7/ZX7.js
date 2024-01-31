@@ -5,11 +5,12 @@ import Bringing from '../../components/Bringing/Bringing';
 import Features from '../../components/Features/Features';
 import Images from '../../components/Images/Images';
 import Youmayalso from '../../components/Youmayalso/Youmayalso';
+import { Link } from 'react-router-dom'
 
 function ZX7() {
     return ( 
-        <div className="Headphones">
-            <button className='button-back'>Go Back</button>
+        <div className="zx7">
+            <Link to='/speakers' className='button-back'>Go Back</Link>
             
             <Products
               imgSrc='/assets/shared/desktop/image-zx7-speaker.jpg'
@@ -52,7 +53,10 @@ function ZX7() {
                 YoumayalsoImgAlt3='XX59 headphones'   
                 YoumayalsoProduct1='ZX9 Speaker'
                 YoumayalsoProduct2='XX99 Mark I'
-                YoumayalsoProduct3='XX59'         
+                YoumayalsoProduct3='XX59'  
+                YoumayalsoUrl1='/zx9'
+                YoumayalsoUrl2='/markone'
+                YoumayalsoUrl3='/xx59'       
             />
 
             <PreviewSmall />

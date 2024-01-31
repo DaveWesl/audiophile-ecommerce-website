@@ -13,10 +13,12 @@ import YX1 from './pages/YX1/YX1';
 import ZX7 from './pages/ZX7/ZX7';
 import ZX9 from './pages/ZX9/ZX9';
 import Speakers from './pages/Speakers/Speakers';
+import ScrollToTop from './components/Assets/ScrollToTop';
 
 function App() {
   return (
     <Router>
+      <ScrollToTop />
       <div className="App">
         <Navbar />
         <Routes>

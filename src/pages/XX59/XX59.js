@@ -5,11 +5,12 @@ import Bringing from '../../components/Bringing/Bringing';
 import Features from '../../components/Features/Features';
 import Images from '../../components/Images/Images';
 import Youmayalso from '../../components/Youmayalso/Youmayalso';
+import { Link } from 'react-router-dom'
 
 function XX59() {
     return ( 
-        <div className="Headphones">
-            <button className='button-back'>Go Back</button>
+        <div className="xx59">
+            <Link to='/headphones' className='button-back'>Go Back</Link>
             
             <Products
               imgSrc='/assets/shared/desktop/image-xx59-headphones.jpg'
@@ -51,7 +52,10 @@ function XX59() {
                 YoumayalsoImgAlt3='zx9 speaker'   
                 YoumayalsoProduct1='XX99 MARK II'
                 YoumayalsoProduct2='XX99 MARK I'
-                YoumayalsoProduct3='ZX9 SPEAKER'         
+                YoumayalsoProduct3='ZX9 SPEAKER'    
+                YoumayalsoUrl1='/marktwo'
+                YoumayalsoUrl2='/markone'
+                YoumayalsoUrl3='/zx9'     
             />
 
             <PreviewSmall />

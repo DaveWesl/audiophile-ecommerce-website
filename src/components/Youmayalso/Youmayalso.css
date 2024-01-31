@@ -27,7 +27,7 @@
     width: 30%;
 }
 
-.youmayalso-h5 {
+.youmayalso-h6 {
     margin: 2rem 0;
 }
 
@@ -53,10 +53,12 @@
 
     .youmayalso-images {
         flex-direction: column;
+        background-color: rgba(151, 151, 151, 0.1);
+        padding-bottom: 2rem;
     }   
 
     .youmayalso-product {
-        width: 40%;
+        width: 40%;        
     }
 }
 
@@ -64,6 +66,8 @@
 
     .youmayalso-images {
         flex-direction: column;
+        background-color: white;
+        padding-bottom: 0;
     }   
 
     .youmayalso-product {

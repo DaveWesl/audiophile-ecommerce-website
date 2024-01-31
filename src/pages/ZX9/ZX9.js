@@ -5,11 +5,12 @@ import Bringing from '../../components/Bringing/Bringing';
 import Features from '../../components/Features/Features';
 import Images from '../../components/Images/Images';
 import Youmayalso from '../../components/Youmayalso/Youmayalso';
+import { Link } from 'react-router-dom'
 
 function ZX9() {
     return ( 
-        <div className="Headphones">
-            <button className='button-back'>Go Back</button>
+        <div className="zx9">
+            <Link to='/speakers' className='button-back'>Go Back</Link>
             
             <Products
               imgSrc='/assets/shared/desktop/image-zx9-speaker.jpg'
@@ -53,7 +54,10 @@ function ZX9() {
                 YoumayalsoImgAlt3='XX59 headphones'   
                 YoumayalsoProduct1='ZX7 Speaker'
                 YoumayalsoProduct2='XX99 Mark I'
-                YoumayalsoProduct3='XX59'         
+                YoumayalsoProduct3='XX59'    
+                YoumayalsoUrl1='/zx7'
+                YoumayalsoUrl2='/markone'
+                YoumayalsoUrl3='/xx59'     
             />
 
             <PreviewSmall />
