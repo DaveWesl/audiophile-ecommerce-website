@@ -1,12 +1,17 @@
 import React, { useState } from 'react';
 import './Navbar.css';
+import { Link } from 'react-router-dom';
 
-function Navbar() {
+function Navbar({ onPageChange }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMenu = (e) => {
     e.preventDefault();
     setIsMenuOpen(!isMenuOpen);
+  };
+
+  const closeMenu = () => {
+    setIsMenuOpen(false);
   };
 
   return ( 
@@ -17,10 +22,10 @@ function Navbar() {
             <img src="/assets/shared/tablet/icon-hamburger.svg" alt="audiophile" width="30" height="24" />
           </a>
           <div className={`tablet-menu ${isMenuOpen ? 'close' : ''}`}>
-            <a href="/">HOME</a>
-            <a href="/headphones">HEADPHONES</a>
-            <a href="/speakers">SPEAKERS</a>
-            <a href="/earphones">EARPHONES</a>
+            <Link to="/" onClick={closeMenu}>HOME</Link>
+            <Link to="/headphones" onClick={closeMenu}>HEADPHONES</Link>
+            <Link to="/speakers" onClick={closeMenu}>SPEAKERS</Link>
+            <Link to="/earphones" onClick={closeMenu}>EARPHONES</Link>
           </div>
         </div>
         <div className="container-logo">
