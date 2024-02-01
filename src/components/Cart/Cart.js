@@ -5,24 +5,26 @@ function Cart() {
     return ( 
         <div className='cart'>
             <h6 className='cart-h6'>CART (3)</h6>
-            <p className='cart-p cart-remove'>Remove all</p>
+            <button className='button-back cart-remove'>Remove all</button>
 
             <div className='cart-product1'>
+                <img className='cart-img' src='/assets/cart/image-xx99-mark-two-headphones.jpg' alt='product'/>
                 <div>
-                    <h7 className='cart-h7'>XX99 MK II</h7>
-                    <p className='cart-p'>$ 2,999</p>
+                    <div className='cart-h7'>XX99 MK II</div>
+                    <p className='cart-price cart-p'>$ 2,999</p>
                 </div>
-                <form className='cart-form product-form'>
-                    <div className="cart-quantity product-quantity">
-                        <button className='product-button product-button-1' type="button">-</button>
-                        <input className='product-button product-input' type="number" id="quantity" name="quantity" min="1"  />
-                        <button className='product-button product-button-1' type="button" >+</button>
-                    </div>
-                </form>
             </div>
+            <form className='cart-form1 product-form'>
+                <div className="cart-quantity product-quantity">
+                    <button className='cart-button1 product-button product-button-1' type="button">-</button>
+                    <input className='cart-button1 product-button product-input' type="number" id="quantity" name="quantity" min="1"  />
+                    <button className='cart-button1 product-button product-button-1' type="button" >+</button>
+                </div>
+            </form>
+            
 
-            <h7 className='cart-h7-total'>TOTAL<span className='cart-price cart-h7'>$ 5,396</span></h7>
-            <button className='cart-button button-1'>CHECKOUT</button>
+            <div className='cart-h7-total'>TOTAL<span className='cart-total-price cart-h7'>$ 5,396</span></div>
+            <button className='cart-button2 button-1'>CHECKOUT</button>
         </div>
      );
 }
