@@ -1,0 +1,31 @@
+.cart {
+    display: grid;
+    grid-template-columns: repeat(2, 2fr);
+    align-items: center;
+    width: 25rem;
+    padding: 2rem;
+}
+
+.cart-remove {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.cart-product1 {
+    grid-column: span 2;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.cart-h7-total {
+    grid-column: span 2;
+    display: flex;
+    justify-content: space-between;
+}
+
+.cart-button {
+    grid-column: span 2;
+    width: 100%;
+}
