@@ -14,6 +14,7 @@ import ZX7 from './pages/ZX7/ZX7';
 import ZX9 from './pages/ZX9/ZX9';
 import Speakers from './pages/Speakers/Speakers';
 import ScrollToTop from './components/Assets/ScrollToTop';
+import Checkout from './pages/Checkout/Checkout';
 
 function App() {
   return (
@@ -22,7 +23,7 @@ function App() {
       <div className="App">
         <Navbar />
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/home" element={<Home />} />
           <Route path="/earphones" element={<Earphones />} />
           <Route path="/headphones" element={<Headphones />} />
           <Route path="/speakers" element={<Speakers />} />
@@ -32,6 +33,7 @@ function App() {
           <Route path="/yx1" element={<YX1 />} />
           <Route path="/zx7" element={<ZX7 />} />
           <Route path="/zx9" element={<ZX9 />} />
+          <Route path="/" element={<Checkout />} />
         </Routes>
         <Footer className="App-footer" />
       </div>
@@ -40,3 +42,4 @@ function App() {
 }
 
 export default App;
+

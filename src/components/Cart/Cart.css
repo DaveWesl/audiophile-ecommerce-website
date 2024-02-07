@@ -1,5 +1,5 @@
 .cart {
-    display: grid;
+    display: none;
     grid-template-columns: repeat(2, 2fr);
     align-items: center;
     gap: 2rem;
