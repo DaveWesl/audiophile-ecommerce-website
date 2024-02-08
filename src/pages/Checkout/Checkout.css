@@ -25,9 +25,9 @@
     padding-bottom: 0.5rem;
 }
 
-.checkout-label-container input {
+.checkout-input {
     border: 1px solid rgba(207, 207, 207, 1);
-    border-radius: 4px;
+    border-radius: 0.5rem;
     padding: 1rem;
 }
 
@@ -42,8 +42,7 @@
     margin: 0;
 }
 
-.checkout-label-container input:hover,
-.checkout-label-container input:active {
+.checkout-input:hover{
     border: 1px solid rgba(216, 125, 74, 1);
     cursor: pointer;
 }
@@ -65,4 +64,22 @@
 .checkout-label-container {
     display: flex;
     flex-direction: column;
+}
+
+.checkout-payment-container {
+    display: flex;
+    justify-content: space-between;
+    grid-column: span 2;
+}
+
+.checkout-payment-p {
+    color: black;
+    font-weight: bold;
+    font-size: 1rem;
+    margin: 0;
+}
+
+.checkout-options {
+    grid-column: span 2;
+    display: flex;
 }
