@@ -1,39 +1,95 @@
-import React from 'react'
 import './Checkout.css'
 import { Link } from 'react-router-dom'
+import React, { useState } from 'react';
+
 
 function Checkout () {
+    const [email, setEmail] = useState('');
+    const [phoneNumber, setPhoneNumber] = useState('');
+
+    const [validEmail, setValidEmail] = useState(true);
+    const [validPhoneNumber, setValidPhoneNumber] = useState(true);
+
+    const handleEmailChange = (event) => {
+        const emailValue = event.target.value;
+        setEmail(emailValue);
+        const isValidEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailValue);
+        setValidEmail(isValidEmail);
+    };
+
+    const handlePhoneNumberChange = (event) => {
+        const phoneNumberValue = event.target.value;
+        setPhoneNumber(phoneNumberValue);
+        setValidPhoneNumber(/^\+?[0-9 \-()]{8,}$/.test(phoneNumberValue));
+    };
+
     return ( 
         <div className='checkout'>
-            <Link to='/' className='button-back'>Go Back</Link>
+            <Link to='/' className='button-back checkout-back'>Go Back</Link>
             <div className='checkout-container'>
                 <div className='checkout-form'>
                     <h2 className='checkout-h2'>CHECKOUT</h2>
                     
-                    <h4 className='checkout-h4'>BILLING DETAILS</h4>
-                    <label htmlFor="billing-name">Name</label>
-                    <input type="text" id="billing-name" name="billing-name" placeholder="Alex Honold" />
-                    <label htmlFor="billing-email">Email Address</label>
-                    <input type="text" id="billing-email" name="billing-email" placeholder="alex@gmail.com" />
-                    <label htmlFor="billing-phone">Phone Number</label>
-                    <input type="text" id="billing-phone" name="billing-phone" placeholder="+1 (202) 555-0136" />
+                    <h6 className='checkout-h6'>BILLING DETAILS</h6>
+                    <div className="checkout-label-container">
+                        <label className='checkout-label' htmlFor="billing-name">Name</label>
+                        <input type="text" id="billing-name" name="billing-name" placeholder="Alex Honold" />
+                    </div>
+                    <div className="checkout-label-container">
+                        <div className='checkout-label-test'>
+                            <label className='checkout-label' htmlFor="billing-email">Email Address</label>
+                            {!validEmail && <p className='label-test-wrong'>Wrong format</p>}
+                        </div>
+                        <input 
+                            type="email" 
+                            id="billing-email" 
+                            name="billing-email" 
+                            placeholder="alex@gmail.com" 
+                            value={email}
+                            onChange={handleEmailChange}
+                            style={{borderColor: validEmail ? '' : 'rgba(205, 44, 44, 1)'}}
+                        />
+                    </div>
+                    <div className="checkout-label-container">
+                        <div className='checkout-label-test'>
+                            <label className='checkout-label' htmlFor="billing-phone">Phone Number</label>
+                            {!validPhoneNumber && <p className='label-test-wrong'>Wrong format</p>}
+                        </div>
+                        <input 
+                            type="text" 
+                            id="billing-phone" 
+                            name="billing-phone" 
+                            placeholder="+1 (202) 555-0136" 
+                            value={phoneNumber}
+                            onChange={handlePhoneNumberChange}
+                            style={{borderColor: validPhoneNumber ? '' : 'rgba(205, 44, 44, 1)'}}
+                        />
+                    </div>
 
-                    <h4 className='checkout-h4'>SHIPPING INFO</h4>
-                    <label htmlFor="shipping-address">Address</label>
-                    <input type="text" id="shipping-address" name="shipping-address" placeholder="1137 Williams Avenue" />
-                    <label htmlFor="shipping-zip">ZIP Code</label>
-                    <input type="text" id="shipping-zip" name="shipping-zip" placeholder="10001" />
-                    <label htmlFor="billing-city">City</label>
-                    <input type="text" id="shipping-city" name="shipping-city" placeholder="New York" />
-                    <label htmlFor="billing-country">Country</label>
-                    <input type="text" id="shipping-country" name="shipping-country" placeholder="United States" />
+                    <h6 className='checkout-h6'>SHIPPING INFO</h6>
+                    <div className="checkout-label-container">
+                        <label className='checkout-label' htmlFor="shipping-address">Address</label>
+                        <input type="text" id="shipping-address" name="shipping-address" placeholder="1137 Williams Avenue" />
+                    </div>
+                    <div className="checkout-label-container">
+                        <label className='checkout-label' htmlFor="shipping-zip">ZIP Code</label>
+                        <input type="text" id="shipping-zip" name="shipping-zip" placeholder="10001" />
+                    </div>
+                    <div className="checkout-label-container">
+                        <label className='checkout-label' htmlFor="billing-city">City</label>
+                        <input type="text" id="shipping-city" name="shipping-city" placeholder="New York" />
+                    </div>
+                    <div className="checkout-label-container">
+                        <label className='checkout-label' htmlFor="billing-country">Country</label>
+                        <input type="text" id="shipping-country" name="shipping-country" placeholder="United States" />
+                    </div>
 
-                    <h4 className='checkout-h4'>SHIPPING INFO</h4>
-                    <h5 className='checkout-h5'>Payment Method</h5>
+                    <h6 className='checkout-h6'>Payment Method</h6>
                     <div className='checkout-button'>
                         <button className='checkout-button-circle1'></button>
                         <button className='checkout-button-text1'>e-Money</button>
                     </div>
+
                     <div className='checkout-button'>
                         <button className='checkout-button-circle2'></button>
                         <button className='checkout-button-text2'>Cash on Delivery</button>
