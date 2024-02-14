@@ -58,8 +58,8 @@ function Navbar({ onPageChange }) {
           </ul>
         </div>
         <div className="container-cart">
-          <a className="cart" href="/">
-            <img src="/assets/shared/desktop/icon-cart.svg" alt="audiophile"/>
+          <a className="cart-logo" href="/">
+            <img src="/assets/shared/desktop/icon-cart.svg" alt="cart"/>
           </a>
         </div>
       </div>

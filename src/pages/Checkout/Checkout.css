@@ -1,6 +1,7 @@
 .checkout {
     background-color: rgba(242, 242, 242, 1);
     padding: 4rem 8rem 7rem 8rem;
+    display: flex;
 }
 
 .checkout-back {
@@ -12,7 +13,7 @@
 .checkout-form {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 1rem;
+    gap: 1.5rem;
 }
 
 .checkout-h2,
@@ -58,7 +59,7 @@
 
 .checkout-h6 {
     color: rgba(216, 125, 74, 1);
-    margin: 2rem 0 0 0;
+    margin: 1.5rem 0 0 0;
 }
 
 .checkout-label-container {
@@ -81,6 +82,7 @@
     background-color: white;
     margin: 0;
     font-weight: bold;
+    font-size: 1rem;
     display: flex;
     gap: 1rem;
     align-items: center;
