@@ -74,11 +74,6 @@
     grid-row: span 2;
 }
 
-.checkout-options {
-    grid-column: span 2;
-    display: flex;
-}
-
 .checkout-button-text {
     border: 1px solid rgba(207, 207, 207, 1);
     border-radius: 0.5rem;
@@ -111,4 +106,16 @@
     background-color: rgba(216, 125, 74, 1);
     width: 0.8rem;
     height: 0.8rem;
+}
+
+.checkout-options {
+    grid-column: span 2;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    padding-right: 1rem;
+}
+
+.checkout-payment-logo {
+    width: 8rem;
 }
