@@ -66,20 +66,49 @@
     flex-direction: column;
 }
 
-.checkout-payment-container {
-    display: flex;
-    justify-content: space-between;
-    grid-column: span 2;
-}
-
 .checkout-payment-p {
     color: black;
     font-weight: bold;
     font-size: 1rem;
     margin: 0;
+    grid-row: span 2;
 }
 
 .checkout-options {
     grid-column: span 2;
     display: flex;
+}
+
+.checkout-button-text {
+    border: 1px solid rgba(207, 207, 207, 1);
+    border-radius: 0.5rem;
+    padding: 1rem;
+    background-color: white;
+    margin: 0;
+    font-weight: bold;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.checkout-button-text:hover {
+    border: 1px solid rgba(216, 125, 74, 1);
+    cursor: pointer;
+}
+
+.checkout-button-circle {
+    border-radius: 100%;
+    border: 1px solid rgba(207, 207, 207, 1);
+    width: 1rem;
+    height: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.checkout-button-circle-inner {
+    border-radius: 100%;
+    background-color: rgba(216, 125, 74, 1);
+    width: 0.8rem;
+    height: 0.8rem;
 }

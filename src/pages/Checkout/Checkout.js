@@ -10,6 +10,9 @@ function Checkout () {
     const [validEmail, setValidEmail] = useState(true);
     const [validPhoneNumber, setValidPhoneNumber] = useState(true);
 
+    const [isEMoneyActive, setEMoneyActive] = useState(false);
+    const [isCashOnDeliveryActive, setCashOnDeliveryActive] = useState(false);
+
     const handleEmailChange = (event) => {
         const emailValue = event.target.value;
         setEmail(emailValue);
@@ -21,6 +24,16 @@ function Checkout () {
         const phoneNumberValue = event.target.value;
         setPhoneNumber(phoneNumberValue);
         setValidPhoneNumber(/^\+?[0-9 \-()]{8,}$/.test(phoneNumberValue));
+    };
+
+    const handleEMoneyButtonClick = () => {
+        setEMoneyActive(true);
+        setCashOnDeliveryActive(false);
+      };
+      
+    const handleCashOnDeliveryButtonClick = () => {
+      setEMoneyActive(false);
+      setCashOnDeliveryActive(true);
     };
 
     return ( 
@@ -87,19 +100,26 @@ function Checkout () {
                     </div>
                     
                     <h6 className='checkout-h6'>Payment Details</h6>
-                    <div className='checkout-payment-container'>
-                        <p className='checkout-payment-p'>Payment Method</p>
-                        <div className='checkout-payment-buttons'>
-                            <div className='checkout-button-container'>
-                                <button className='checkout-button-circle1'></button>
-                                <button className='checkout-button-text1'>e-Money</button>
-                            </div>
-                            <div className='checkout-button-container'>
-                                <button className='checkout-button-circle2'></button>
-                                <button className='checkout-button-text2'>Cash on Delivery</button>
-                            </div>
-                        </div>
-                    </div>
+                    <p className='checkout-payment-p'>Payment Method</p>
+                    <button
+                      className={`checkout-button-text checkout-button-text1 ${isEMoneyActive ? 'active' : ''}`}
+                      onClick={handleEMoneyButtonClick}
+                    >
+                      <div className={`checkout-button-circle checkout-button-circle1 ${isEMoneyActive ? 'active' : ''}`}>
+                        {isEMoneyActive && <div className='checkout-button-circle-inner'></div>}
+                      </div>
+                      e-Money
+                    </button>
+
+                    <button
+                      className={`checkout-button-text checkout-button-text2 ${isCashOnDeliveryActive ? 'active' : ''}`}
+                      onClick={handleCashOnDeliveryButtonClick}
+                    >
+                      <div className={`checkout-button-circle checkout-button-circle2 ${isCashOnDeliveryActive ? 'active' : ''}`}>
+                        {isCashOnDeliveryActive && <div className='checkout-button-circle-inner'></div>}
+                      </div>
+                      Cash on Delivery
+                    </button>
 
                     <div className='checkout-options'>
                         <svg width="48" height="48" xmlns="http://www.w3.org/2000/svg">
