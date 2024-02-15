@@ -16,7 +16,7 @@
     gap: 1.5rem;
 }
 
-.checkout-h2,
+.checkout-h3,
 .checkout-h6 {
     grid-column: span 2;
 }
@@ -50,16 +50,18 @@
 
 .checkout-container {
     background-color: white;
-    padding: 3rem;
+    padding: 2rem;
+    border-radius: 1rem;
+    min-width: 50%;
 }
 
-.checkout-h2 {
+.checkout-h3 {
     margin: 0;
 }
 
 .checkout-h6 {
     color: rgba(216, 125, 74, 1);
-    margin: 1.5rem 0 0 0;
+    margin: 1rem 0 0 0;
 }
 
 .checkout-label-container {
@@ -120,4 +122,139 @@
 
 .checkout-payment-logo {
     width: 8rem;
+    min-width: 3rem;
+}
+
+/*SUMMARY*/
+
+.checkout-all {
+    width: 100%;
+}
+
+.checkout-container-summary {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 1rem;    
+    flex-wrap: wrap;
+}
+
+.summary {
+    display: grid;
+    grid-template-columns: repeat(3, 2fr);
+    align-items: center;
+    gap: 2rem;
+    height: fit-content;
+    padding: 2rem;
+    border-radius: 1rem;
+    background-color: white;
+    min-width: 18rem;
+}
+
+.summary-h6 {
+    margin: 0;
+    grid-column: span 3;
+}
+
+.summary-p {
+    margin: 0;
+}
+
+.summary-product1 {
+    display: flex;
+    align-items: center;
+    grid-column: span 2;
+}
+
+.summary-img {
+    width: 4rem;
+    margin-right: 1rem;
+}
+
+.summary-quantity {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.summary-h7,
+.summary-price,
+.summary-h7-total {
+    font-weight: bold;
+}
+
+.summary-total {
+    grid-column: span 3;
+}
+
+.summary-h7-total {
+    grid-column: span 3;
+    display: flex;
+    justify-content: space-between;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.summary-h7-span {
+    color: black;
+    font-weight: bold;
+}
+
+.summary-grandtotal-price {
+    color: rgba(216, 125, 74, 1);
+}
+
+.summary-button2 {
+    grid-column: span 3;
+    width: 100%;
+}
+
+@media screen and (max-width: 1000px) {
+
+    .checkout {
+        padding: 4rem 2rem 7rem 2rem;
+    }
+}
+
+@media screen and (max-width: 928px) {
+
+    .checkout {
+        padding: 4rem 5rem 7rem 5rem;
+    }
+    .summary {
+        width: 100%;
+    }
+    .checkout-container {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .checkout {
+        padding: 4rem 2rem 7rem 2rem;
+    }
+}
+
+@media screen and (max-width: 590px) {
+    .checkout-form {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .summary {
+        min-width: auto;
+    }
+}
+
+@media screen and (max-width: 380px) {
+
+    .checkout-payment-logo {
+        display: none;
+    }
+
+    .checkout-container {
+        padding: 1rem;
+    }
+    .summary {
+        min-width: auto;
+        padding: 1rem;
+    }
 }
