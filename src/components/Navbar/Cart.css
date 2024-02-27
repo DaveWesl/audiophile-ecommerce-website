@@ -7,10 +7,29 @@
     padding: 2rem;
     border: solid 1px;
     border-radius: 1rem;
-    position: absolute;
+    position: fixed;
     background-color: white;
     top: 6rem;
     right: 3rem;
+    z-index: 99;
+}
+
+.cart-close {
+    display: block;
+    text-align: start;
+    font-weight: bold;
+    font-size: 1rem;
+    grid-column: span 2;
+    background-color: white;
+    border: none;
+    margin: 0;
+    padding: 0;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.cart-close:hover {
+    cursor: pointer;
+    color: rgb(216, 125, 74);
 }
 
 .cart-h6 {
