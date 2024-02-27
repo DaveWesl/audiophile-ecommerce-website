@@ -1,4 +1,5 @@
 import "./Checkout.css";
+import "./Confirmation.css";
 import { Link } from "react-router-dom";
 import React, { useState } from "react";
 
@@ -36,7 +37,7 @@ function Checkout() {
   };
 
   return (
-    <div className="checkout">
+    <div className="checkout confirmation-parent">
       <div className="checkout-all">
         <Link to="/" className="button-back checkout-back">
           Go Back
@@ -293,6 +294,24 @@ function Checkout() {
             <button className="summary-button2 button-1">CONTINUE & PAY</button>
           </div>
         </div>
+      </div>
+    
+      <div className="confirmation">
+          <div className="confirmation-container">
+            <svg width="64" height="64" xmlns="http://www.w3.org/2000/svg">
+                <g fill="none" fill-rule="evenodd">
+                    <circle fill="#D87D4A" cx="32" cy="32" r="32" />
+                    <path stroke="#FFF" stroke-width="4" d="m20.754 33.333 6.751 6.751 15.804-15.803" />
+                </g>
+            </svg>
+            <h3 className="confirmation-h3 checkout-h3">THANK YOU FOR YOUR ORDER</h3>
+            <p className="confirmation-p">You will receive an email confirmation shortly.</p>
+            <div className="confirmation-container-total">
+              <h5 className="confirmation-h5">GRAND TOTAL</h5>
+              <h5 className="confirmation-h5 confirmation-total">$ 5,446</h5>
+            </div>
+            <button className="summary-button2 button-1">BACK TO HOME</button>
+          </div>
       </div>
     </div>
   );
