@@ -4,13 +4,11 @@ import { Link } from 'react-router-dom'
 import HomeHeader from "../../components/HomeHeader/HomeHeader";
 import PreviewSmall from "../../components/PreviewSmall/PreviewSmall";
 import Bringing from '../../components/Bringing/Bringing';
-import Cart from "../../components/Cart/Cart";
 
 function Home() {
   return (
     <div className="desktop-home">
       <HomeHeader />
-      <Cart />
       <PreviewSmall />
       <div className="home-presentation">
         <div className="home-zx9">

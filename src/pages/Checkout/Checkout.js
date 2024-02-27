@@ -13,6 +13,12 @@ function Checkout() {
   const [isEMoneyActive, setEMoneyActive] = useState(false);
   const [isCashOnDeliveryActive, setCashOnDeliveryActive] = useState(false);
 
+  const [showConfirmation, setShowConfirmation] = useState(false);
+
+  const handleContinueAndPay = () => {
+    setShowConfirmation(true);
+  };
+
   const handleEmailChange = (event) => {
     const emailValue = event.target.value;
     setEmail(emailValue);
@@ -291,11 +297,12 @@ function Checkout() {
                 $ 5,446
               </span>
             </div>
-            <button className="summary-button2 button-1">CONTINUE & PAY</button>
+            <button className="summary-button2 button-1" onClick={handleContinueAndPay}>CONTINUE & PAY</button>
           </div>
         </div>
       </div>
     
+      {showConfirmation && (
       <div className="confirmation">
           <div className="confirmation-container">
             <svg width="64" height="64" xmlns="http://www.w3.org/2000/svg">
@@ -310,9 +317,10 @@ function Checkout() {
               <h5 className="confirmation-h5">GRAND TOTAL</h5>
               <h5 className="confirmation-h5 confirmation-total">$ 5,446</h5>
             </div>
-            <button className="summary-button2 button-1">BACK TO HOME</button>
+            <Link to="/home" className="summary-button2 button-1">BACK TO HOME</Link>
           </div>
       </div>
+      )}
     </div>
   );
 }
