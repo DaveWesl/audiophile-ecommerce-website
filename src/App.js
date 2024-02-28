@@ -23,7 +23,7 @@ function App() {
       <div className="App">
         <Navbar />
         <Routes>
-          <Route path="/home" element={<Home />} />
+          <Route path="/" element={<Home />} />
           <Route path="/earphones" element={<Earphones />} />
           <Route path="/headphones" element={<Headphones />} />
           <Route path="/speakers" element={<Speakers />} />
@@ -33,7 +33,7 @@ function App() {
           <Route path="/yx1" element={<YX1 />} />
           <Route path="/zx7" element={<ZX7 />} />
           <Route path="/zx9" element={<ZX9 />} />
-          <Route path="/" element={<Checkout />} />
+          <Route path="/checkout" element={<Checkout />} />
         </Routes>
         <Footer className="App-footer" />
       </div>

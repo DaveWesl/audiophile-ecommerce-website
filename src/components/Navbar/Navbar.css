@@ -16,6 +16,10 @@
     padding: 0;
 }
 
+.menu-tablet:hover {
+    cursor: pointer;
+}
+
 .navbar-nav a,
 .tablet-menu a{
     text-decoration: none;
