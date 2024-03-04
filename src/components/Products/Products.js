@@ -41,7 +41,7 @@ function Products(props) {
                     <input className='product-button product-input' type="number" id="quantity" name="quantity" value={quantity} min="1" onChange={(e) => setQuantity(parseInt(e.target.value))} />
                     <button className='product-button product-button-1' type="button" onClick={increaseQuantity}>+</button>
                 </div>
-                <button className='button-1'>Add to Cart</button>
+                <button className='button-1' onClick={handleSubmit}>Add to Cart</button>
               </form>
             </div>
             )}
