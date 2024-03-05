@@ -7,18 +7,20 @@ import Images from '../../components/Images/Images';
 import Youmayalso from '../../components/Youmayalso/Youmayalso';
 import { Link } from 'react-router-dom'
 
-function YX1() {
+function YX1({ onAddToCart }) {
     return ( 
         <div className="yx1">
             <Link to='/earphones' className='button-back'>Go Back</Link>
             
             <Products
-              imgSrc='/assets/product-yx1-earphones/desktop/image-product.jpg'
-              overline='NEW PRODUCT'
-              heading='YX1 WIRELESS EARPHONES'
-              description='Tailor your listening experience with bespoke dynamic drivers from the new YX1 Wireless Earphones. Enjoy incredible high-fidelity sound even in noisy environments with its active noise cancellation feature.'
-              price='$ 599'
-              displayImageFirst={true}
+                key='2'  
+                imgSrc='/assets/product-yx1-earphones/desktop/image-product.jpg'
+                overline='NEW PRODUCT'
+                heading='YX1 WIRELESS EARPHONES'
+                description='Tailor your listening experience with bespoke dynamic drivers from the new YX1 Wireless Earphones. Enjoy incredible high-fidelity sound even in noisy environments with its active noise cancellation feature.'
+                price='$ 599'
+                displayImageFirst={true}
+                onAddToCart={onAddToCart}
             />
 
             <Features 

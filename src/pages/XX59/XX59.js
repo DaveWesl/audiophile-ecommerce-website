@@ -7,17 +7,19 @@ import Images from '../../components/Images/Images';
 import Youmayalso from '../../components/Youmayalso/Youmayalso';
 import { Link } from 'react-router-dom'
 
-function XX59() {
+function XX59({ onAddToCart }) {
     return ( 
         <div className="xx59">
             <Link to='/headphones' className='button-back'>Go Back</Link>
             
             <Products
-              imgSrc='/assets/shared/desktop/image-xx59-headphones.jpg'
-              heading='XX59 Headphones'
-              description='Enjoy your audio almost anywhere and customize it to your specific tastes with the XX59 headphones. The stylish yet durable versatile wireless headset is a brilliant companion at home or on the move.'
-              price='$ 899'
-              displayImageFirst={true}
+                key='1'  
+                imgSrc='/assets/shared/desktop/image-xx59-headphones.jpg'
+                heading='XX59 Headphones'
+                description='Enjoy your audio almost anywhere and customize it to your specific tastes with the XX59 headphones. The stylish yet durable versatile wireless headset is a brilliant companion at home or on the move.'
+                price='$ 899'
+                displayImageFirst={true}
+                onAddToCart={onAddToCart}
             />
 
             <Features 

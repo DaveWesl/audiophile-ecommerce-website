@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import './App.css';
 import Footer from './components/Footer/Footer';
@@ -17,11 +17,18 @@ import ScrollToTop from './components/Assets/ScrollToTop';
 import Checkout from './pages/Checkout/Checkout';
 
 function App() {
+
+  const [cartItems, setCartItems] = useState([]);
+
+  const handleAddToCart = (productInfo) => {
+    setCartItems((prevCartItems) => [...prevCartItems, productInfo]);
+  };
+
   return (
     <Router>
       <ScrollToTop />
       <div className="App">
-        <Navbar />
+        <Navbar cartItems={cartItems} setCartItems={setCartItems}/>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/earphones" element={<Earphones />} />
@@ -29,8 +36,8 @@ function App() {
           <Route path="/speakers" element={<Speakers />} />
           <Route path="/markone" element={<MarkOne />} />
           <Route path="/marktwo" element={<MarkTwo />} />
-          <Route path="/xx59" element={<XX59 />} />
-          <Route path="/yx1" element={<YX1 />} />
+          <Route path="/xx59" element={<XX59 onAddToCart={handleAddToCart}/>} />
+          <Route path="/yx1" element={<YX1 onAddToCart={handleAddToCart}/>} />
           <Route path="/zx7" element={<ZX7 />} />
           <Route path="/zx9" element={<ZX9 />} />
           <Route path="/checkout" element={<Checkout />} />

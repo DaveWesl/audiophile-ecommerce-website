@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import './Products.css';
 
 function Products(props) {
-  const { imgSrc, overline, heading, description, displayImageFirst, buttonSeeProduct, price, productUrl } = props;
+  const { imgSrc, overline, heading, description, displayImageFirst, buttonSeeProduct, price, productUrl, key } = props;
   const [quantity, setQuantity] = useState(1);
 
   function increaseQuantity() {
@@ -18,7 +18,15 @@ function Products(props) {
 
   function handleSubmit(event) {
     event.preventDefault();
-    console.log('Adding', quantity, 'to cart...');
+    const productInfo = {
+      imgSrc,
+      heading,
+      price,
+      quantity,
+      key,
+      // Füge weitere Informationen hinzu, die du übergeben möchtest
+    };
+    props.onAddToCart(productInfo);
   }
 
   return ( 
