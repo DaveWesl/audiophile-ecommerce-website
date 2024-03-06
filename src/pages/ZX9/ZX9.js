@@ -7,12 +7,14 @@ import Images from '../../components/Images/Images';
 import Youmayalso from '../../components/Youmayalso/Youmayalso';
 import { Link } from 'react-router-dom'
 
-function ZX9() {
+function ZX9({onAddToCart}) {
     return ( 
         <div className="zx9">
             <Link to='/speakers' className='button-back'>Go Back</Link>
             
             <Products
+                onAddToCart={onAddToCart}
+                id='zx9'
               imgSrc='/assets/shared/desktop/image-zx9-speaker.jpg'
               overline='NEW PRODUCT'
               heading='ZX9 SPEAKER'

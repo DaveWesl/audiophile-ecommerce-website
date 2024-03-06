@@ -13,7 +13,7 @@ function XX59({ onAddToCart }) {
             <Link to='/headphones' className='button-back'>Go Back</Link>
             
             <Products
-                key='1'  
+                id='xx59' 
                 imgSrc='/assets/shared/desktop/image-xx59-headphones.jpg'
                 heading='XX59 Headphones'
                 description='Enjoy your audio almost anywhere and customize it to your specific tastes with the XX59 headphones. The stylish yet durable versatile wireless headset is a brilliant companion at home or on the move.'

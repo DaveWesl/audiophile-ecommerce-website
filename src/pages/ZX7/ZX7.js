@@ -7,12 +7,14 @@ import Images from '../../components/Images/Images';
 import Youmayalso from '../../components/Youmayalso/Youmayalso';
 import { Link } from 'react-router-dom'
 
-function ZX7() {
+function ZX7({onAddToCart}) {
     return ( 
         <div className="zx7">
             <Link to='/speakers' className='button-back'>Go Back</Link>
             
             <Products
+                onAddToCart={onAddToCart}
+                id='zx7'
               imgSrc='/assets/shared/desktop/image-zx7-speaker.jpg'
               heading='ZX7 SPEAKER'
               description='Stream high quality sound wirelessly with minimal to no loss. The ZX7 speaker uses high-end audiophile components that represents the top of the line powered speakers for home or studio use.'

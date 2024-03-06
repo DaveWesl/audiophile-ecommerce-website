@@ -13,7 +13,7 @@ function YX1({ onAddToCart }) {
             <Link to='/earphones' className='button-back'>Go Back</Link>
             
             <Products
-                key='2'  
+                id='yx1'
                 imgSrc='/assets/product-yx1-earphones/desktop/image-product.jpg'
                 overline='NEW PRODUCT'
                 heading='YX1 WIRELESS EARPHONES'

@@ -21,7 +21,13 @@ function App() {
   const [cartItems, setCartItems] = useState([]);
 
   const handleAddToCart = (productInfo) => {
-    setCartItems((prevCartItems) => [...prevCartItems, productInfo]);
+    // Prüfe, ob das Produkt bereits im Warenkorb ist
+    const isProductInCart = cartItems.some((item) => item.id === productInfo.id);
+
+    if (!isProductInCart) {
+      // Füge das Produkt zum Warenkorb hinzu, nur wenn es nicht vorhanden ist
+      setCartItems((prevCartItems) => [...prevCartItems, { ...productInfo, cartItemId: productInfo.id }]);
+    }
   };
 
   return (
@@ -34,12 +40,12 @@ function App() {
           <Route path="/earphones" element={<Earphones />} />
           <Route path="/headphones" element={<Headphones />} />
           <Route path="/speakers" element={<Speakers />} />
-          <Route path="/markone" element={<MarkOne />} />
-          <Route path="/marktwo" element={<MarkTwo />} />
+          <Route path="/markone" element={<MarkOne onAddToCart={handleAddToCart}/>} />
+          <Route path="/marktwo" element={<MarkTwo onAddToCart={handleAddToCart}/>} />
           <Route path="/xx59" element={<XX59 onAddToCart={handleAddToCart}/>} />
           <Route path="/yx1" element={<YX1 onAddToCart={handleAddToCart}/>} />
-          <Route path="/zx7" element={<ZX7 />} />
-          <Route path="/zx9" element={<ZX9 />} />
+          <Route path="/zx7" element={<ZX7 onAddToCart={handleAddToCart}/>} />
+          <Route path="/zx9" element={<ZX9 onAddToCart={handleAddToCart}/>} />
           <Route path="/checkout" element={<Checkout />} />
         </Routes>
         <Footer className="App-footer" />

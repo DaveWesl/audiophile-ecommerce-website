@@ -7,12 +7,14 @@ import Images from '../../components/Images/Images';
 import Youmayalso from '../../components/Youmayalso/Youmayalso';
 import { Link } from 'react-router-dom'
 
-function MarkOne() {
+function MarkOne({onAddToCart}) {
     return ( 
         <div className="markone">
             <Link to='/headphones' className='button-back'>Go Back</Link>
             
             <Products
+                onAddToCart={onAddToCart}
+                id='markone'
               imgSrc='/assets/shared/desktop/image-xx99-mark-one-headphones.jpg'
               heading='XX99 Mark I Headphones'
               description='As the gold standard for headphones, the classic XX99 Mark I offers detailed and accurate audio reproduction for audiophiles, mixing engineers, and music aficionados alike in studios and on the go.'

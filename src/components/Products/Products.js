@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import './Products.css';
 
 function Products(props) {
-  const { imgSrc, overline, heading, description, displayImageFirst, buttonSeeProduct, price, productUrl, key } = props;
+  const { imgSrc, overline, heading, description, displayImageFirst, buttonSeeProduct, price, productUrl, id } = props;
   const [quantity, setQuantity] = useState(1);
 
   function increaseQuantity() {
@@ -23,7 +23,7 @@ function Products(props) {
       heading,
       price,
       quantity,
-      key,
+      id,
       // Füge weitere Informationen hinzu, die du übergeben möchtest
     };
     props.onAddToCart(productInfo);

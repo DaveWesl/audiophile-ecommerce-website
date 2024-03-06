@@ -7,12 +7,14 @@ import Images from '../../components/Images/Images';
 import Youmayalso from '../../components/Youmayalso/Youmayalso';
 import { Link } from 'react-router-dom'
 
-function MarkTwo() {
+function MarkTwo({onAddToCart}) {
     return ( 
         <div className="marktwo">
             <Link to='/headphones' className='button-back'>Go Back</Link>
             
             <Products
+                onAddToCart={onAddToCart}
+                id='marktwo'
               imgSrc='/assets/shared/desktop/image-xx99-mark-two-headphones.jpg'
               overline='NEW PRODUCT'
               heading='XX99 Mark II Headphones'

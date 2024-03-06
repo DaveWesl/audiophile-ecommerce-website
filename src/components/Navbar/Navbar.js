@@ -25,23 +25,45 @@ function Navbar({ onPageChange, cartItems, setCartItems }) {
   };
 
   const updateQuantity = (productId, newQuantity) => {
-    setCartItems((prevCartItems) =>
-      prevCartItems.map((item) =>
-        item.id === productId ? { ...item, quantity: newQuantity } : item
-      )
-    );
+    if (newQuantity >= 0) {
+      // Wenn die neue Quantity größer oder gleich 0 ist, aktualisiere den Warenkorb
+      setCartItems((prevCartItems) => {
+        // Filtere das Element mit Quantity 0 heraus
+        const updatedCartItems = prevCartItems.filter(
+          (item) => !(item.id === productId && newQuantity === 0)
+        );
+  
+        // Aktualisiere die Quantity des entsprechenden Elements oder füge es hinzu
+        const updatedItems = updatedCartItems.map((item) =>
+          item.id === productId ? { ...item, quantity: newQuantity } : item
+        );
+  
+        return updatedItems;
+      });
+    }
   };
 
   const calculateTotalPrice = () => {
-    // Berechnung des Gesamtpreises für alle Artikel im Warenkorb
-    return cartItems.reduce((total, item) => {
-      return total + item.quantity * parseFloat(item.price.replace('$', '').replace(',', ''));
-    }, 0).toFixed(2);
+    return cartItems
+      .reduce((total, item) => {
+        return (
+          total +
+          item.quantity *
+            parseFloat(item.price.replace("$", "").replace(",", ""))
+        );
+      }, 0)
+      .toFixed(2);
+  };
+
+  const calculateTotalQuantity = () => {
+    return cartItems.reduce((total, item) => total + item.quantity, 0);
   };
 
   const removeAllFromCart = () => {
     setCartItems([]);
   };
+
+  const isCartNotEmpty = cartItems.length > 0;
 
   return (
     <>
@@ -105,7 +127,10 @@ function Navbar({ onPageChange, cartItems, setCartItems }) {
             </ul>
           </div>
           <div className="container-cart">
-            <a className="cart-logo" onClick={toggleCart}>
+            <a
+              className={`cart-logo ${isCartNotEmpty ? "white-cart-logo" : ""}`}
+              onClick={toggleCart}
+            >
               <svg
                 width="23"
                 height="20"
@@ -114,7 +139,7 @@ function Navbar({ onPageChange, cartItems, setCartItems }) {
               >
                 <path
                   d="M8.625 15.833c1.132 0 2.054.935 2.054 2.084 0 1.148-.922 2.083-2.054 2.083-1.132 0-2.054-.935-2.054-2.083 0-1.15.922-2.084 2.054-2.084zm9.857 0c1.132 0 2.054.935 2.054 2.084 0 1.148-.922 2.083-2.054 2.083-1.132 0-2.053-.935-2.053-2.083 0-1.15.92-2.084 2.053-2.084zm-9.857 1.39a.69.69 0 00-.685.694.69.69 0 00.685.694.69.69 0 00.685-.694.69.69 0 00-.685-.695zm9.857 0a.69.69 0 00-.684.694.69.69 0 00.684.694.69.69 0 00.685-.694.69.69 0 00-.685-.695zM4.717 0c.316 0 .59.215.658.517l.481 2.122h16.47a.68.68 0 01.538.262c.127.166.168.38.11.579l-2.695 9.236a.672.672 0 01-.648.478H7.41a.667.667 0 00-.673.66c0 .364.303.66.674.66h12.219c.372 0 .674.295.674.66 0 .364-.302.66-.674.66H7.412c-1.115 0-2.021-.889-2.021-1.98 0-.812.502-1.511 1.218-1.816L4.176 1.32H.674A.667.667 0 010 .66C0 .296.302 0 .674 0zm16.716 3.958H6.156l1.797 7.917h11.17l2.31-7.917z"
-                  fill="#FFF"
+                  fill={isCartNotEmpty ? "rgba(216, 125, 74, 1)" : "#FFF"}
                   fillRule="nonzero"
                 />
               </svg>
@@ -125,23 +150,24 @@ function Navbar({ onPageChange, cartItems, setCartItems }) {
 
       {isCartOpen && (
         <div className="cart">
-          <button className="cart-close" onClick={closeCart}>
-            X
-          </button>
+          <div className="cart-container-buttons">
+            <button className="cart-close" onClick={closeCart}>
+              X
+            </button>
 
-          <h6 className="cart-h6">CART (3)</h6>
-          <button
-            className="button-back cart-remove"
-            onClick={removeAllFromCart}
-          >
-            Remove all
-          </button>
-
+            <h6 className="cart-h6">CART ({calculateTotalQuantity()})</h6>
+            <button
+              className="button-back cart-remove"
+              onClick={removeAllFromCart}
+            >
+              Remove all
+            </button>
+          </div>
           {cartItems.map((item) => (
             <div key={item.id} className="cart-product1">
               <div className="test10">
                 <img className="cart-img" src={item.imgSrc} alt="product" />
-                <div>
+                <div className="cart-description">
                   <div className="cart-h7">{item.heading}</div>
                   <p className="cart-price cart-p">{item.price}</p>
                 </div>
@@ -179,7 +205,10 @@ function Navbar({ onPageChange, cartItems, setCartItems }) {
           ))}
 
           <div className="cart-h7-total">
-            TOTAL<span className="cart-total-price cart-h7">$ {calculateTotalPrice()}</span>
+            TOTAL
+            <span className="cart-total-price cart-h7">
+              $ {calculateTotalPrice()}
+            </span>
           </div>
           <Link
             to="/checkout"
