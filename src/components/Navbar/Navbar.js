@@ -32,12 +32,12 @@ function Navbar({ onPageChange, cartItems, setCartItems }) {
         const updatedCartItems = prevCartItems.filter(
           (item) => !(item.id === productId && newQuantity === 0)
         );
-  
+
         // Aktualisiere die Quantity des entsprechenden Elements oder füge es hinzu
         const updatedItems = updatedCartItems.map((item) =>
           item.id === productId ? { ...item, quantity: newQuantity } : item
         );
-  
+
         return updatedItems;
       });
     }
@@ -211,7 +211,15 @@ function Navbar({ onPageChange, cartItems, setCartItems }) {
             </span>
           </div>
           <Link
-            to="/checkout"
+            to={{
+              pathname: "/checkout",
+              state: {
+                additionalInfo: {
+                  totalQuantity: calculateTotalQuantity(),
+                  totalPrice: calculateTotalPrice(),
+                },
+              },
+            }}
             onClick={closeCart}
             className="cart-button2 button-1"
           >
