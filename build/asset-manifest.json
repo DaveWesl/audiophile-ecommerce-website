@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/audiophile-ecommerce-website/static/css/main.de37219f.css",
+    "main.js": "/audiophile-ecommerce-website/static/js/main.a76f4b36.js",
+    "static/js/787.5f17d451.chunk.js": "/audiophile-ecommerce-website/static/js/787.5f17d451.chunk.js",
+    "static/media/image-hero.jpg": "/audiophile-ecommerce-website/static/media/image-hero.fb7f46173fa4c819c755.jpg",
+    "static/media/image-header.jpg": "/audiophile-ecommerce-website/static/media/image-header.d200a3583e72c7981f46.jpg",
+    "static/media/image-speaker-zx7.jpg": "/audiophile-ecommerce-website/static/media/image-speaker-zx7.173a4cb5c7acfc7f300c.jpg",
+    "static/media/image-earphones-yx1.jpg": "/audiophile-ecommerce-website/static/media/image-earphones-yx1.48e16a44bd58ed3be41e.jpg",
+    "index.html": "/audiophile-ecommerce-website/index.html",
+    "main.de37219f.css.map": "/audiophile-ecommerce-website/static/css/main.de37219f.css.map",
+    "main.a76f4b36.js.map": "/audiophile-ecommerce-website/static/js/main.a76f4b36.js.map",
+    "787.5f17d451.chunk.js.map": "/audiophile-ecommerce-website/static/js/787.5f17d451.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.de37219f.css",
+    "static/js/main.a76f4b36.js"
+  ]
+}
