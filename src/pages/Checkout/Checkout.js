@@ -36,7 +36,11 @@ function Checkout({ cartItems, setCartItems }) {
   const { total, vatCost, grandTotal } = calculateTotalPrice();
 
   const handleContinueAndPay = () => {
-    setShowConfirmation(true);
+    if (cartItems.length > 0) {
+      setShowConfirmation(true);
+    } else {
+      alert("You don't have a product in the cart.");
+    }
   };
 
   const handleEmailChange = (event) => {

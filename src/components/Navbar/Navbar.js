@@ -24,16 +24,21 @@ function Navbar({ onPageChange, cartItems, setCartItems }) {
     setIsCartOpen(false);
   };
 
+  const handleCheckoutClick = () => {
+    if (isCartNotEmpty) {
+      closeCart();
+    } else {
+      alert("Your cart is empty. Add items to proceed.");
+    }
+  };
+
   const updateQuantity = (productId, newQuantity) => {
     if (newQuantity >= 0) {
-      // Wenn die neue Quantity größer oder gleich 0 ist, aktualisiere den Warenkorb
       setCartItems((prevCartItems) => {
-        // Filtere das Element mit Quantity 0 heraus
         const updatedCartItems = prevCartItems.filter(
           (item) => !(item.id === productId && newQuantity === 0)
         );
 
-        // Aktualisiere die Quantity des entsprechenden Elements oder füge es hinzu
         const updatedItems = updatedCartItems.map((item) =>
           item.id === productId ? { ...item, quantity: newQuantity } : item
         );
@@ -211,9 +216,9 @@ function Navbar({ onPageChange, cartItems, setCartItems }) {
             </span>
           </div>
           <Link
-            to="/checkout"
-            onClick={closeCart}
-            className="cart-button2 button-1"
+            to={isCartNotEmpty ? "/checkout" : "#"}
+            onClick={handleCheckoutClick}
+            className={`cart-button2 button-1 ${!isCartNotEmpty ? "disabled" : ""}`}
           >
             CHECKOUT
           </Link>
