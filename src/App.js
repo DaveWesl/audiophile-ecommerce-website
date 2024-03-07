@@ -46,7 +46,7 @@ function App() {
           <Route path="/yx1" element={<YX1 onAddToCart={handleAddToCart}/>} />
           <Route path="/zx7" element={<ZX7 onAddToCart={handleAddToCart}/>} />
           <Route path="/zx9" element={<ZX9 onAddToCart={handleAddToCart}/>} />
-          <Route path="/checkout" element={<Checkout />} />
+          <Route path="/checkout" element={<Checkout cartItems={cartItems} setCartItems={setCartItems}/>} />
         </Routes>
         <Footer className="App-footer" />
       </div>

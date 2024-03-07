@@ -24,7 +24,6 @@ function Products(props) {
       price,
       quantity,
       id,
-      // Füge weitere Informationen hinzu, die du übergeben möchtest
     };
     props.onAddToCart(productInfo);
   }

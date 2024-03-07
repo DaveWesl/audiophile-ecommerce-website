@@ -3,7 +3,7 @@ import "./Confirmation.css";
 import { Link } from "react-router-dom";
 import React, { useState } from "react";
 
-function Checkout() {
+function Checkout({ cartItems, setCartItems }) {
   const [email, setEmail] = useState("");
   const [phoneNumber, setPhoneNumber] = useState("");
 
@@ -14,6 +14,26 @@ function Checkout() {
   const [isCashOnDeliveryActive, setCashOnDeliveryActive] = useState(false);
 
   const [showConfirmation, setShowConfirmation] = useState(false);
+
+  const calculateTotalPrice = () => {
+    const cartTotal = cartItems.reduce((total, item) => {
+      return (
+        total +
+        item.quantity * parseFloat(item.price.replace("$", "").replace(",", ""))
+      );
+    }, 0);
+
+    const shippingCost = 50;
+    const vatRate = 0.19; // 19% Mehrwertsteuersatz
+
+    const vatCost = cartTotal * vatRate;
+    const total = cartTotal;
+    const grandTotal = cartTotal + shippingCost;
+
+    return { total, vatCost, grandTotal };
+  };
+
+  const { total, vatCost, grandTotal } = calculateTotalPrice();
 
   const handleContinueAndPay = () => {
     setShowConfirmation(true);
@@ -258,24 +278,22 @@ function Checkout() {
           <div className="summary">
             <h6 className="summary-h6">SUMMARY</h6>
 
-            <div className="summary-product1">
-              <img
-                className="summary-img"
-                src="/assets/cart/image-xx99-mark-two-headphones.jpg"
-                alt="product"
-              />
-              <div>
-                <div className="summary-h7">XX99 MK II</div>
-                <p className="summary-price summary-p">$ 2,999</p>
+            {cartItems.map((item) => (
+              <div key={item.id} className="summary-product1">
+                <img className="summary-img" src={item.imgSrc} alt="product" />
+                <div>
+                  <div className="summary-h7">{item.heading}</div>
+                  <p className="summary-price summary-p">{item.price}</p>
+                </div>
+                <p className="summary-p summary-quantity">x{item.quantity}</p>
               </div>
-            </div>
-            <p className="summary-p summary-quantity">x1</p>
+            ))}
 
             <div className="summary-total">
               <div className="summary-h7-total">
                 TOTAL
                 <span className="summary-total-price summary-h7-span">
-                  $ 5,396
+                  $ {total.toFixed(2)}
                 </span>
               </div>
               <div className="summary-h7-total">
@@ -287,39 +305,54 @@ function Checkout() {
               <div className="summary-h7-total">
                 VAT (INCLUDED)
                 <span className="summary-vat-price summary-h7-span">
-                  $ 1,079
+                  $ {vatCost.toFixed(2)}
                 </span>
               </div>
             </div>
             <div className="summary-h7-total">
               GRAND TOTAL
               <span className="summary-grandtotal-price summary-h7-span">
-                $ 5,446
+                $ {grandTotal.toFixed(2)}
               </span>
             </div>
-            <button className="summary-button2 button-1" onClick={handleContinueAndPay}>CONTINUE & PAY</button>
+            <button
+              className="summary-button2 button-1"
+              onClick={handleContinueAndPay}
+            >
+              CONTINUE & PAY
+            </button>
           </div>
         </div>
       </div>
-    
+
       {showConfirmation && (
-      <div className="confirmation">
+        <div className="confirmation">
           <div className="confirmation-container">
             <svg width="64" height="64" xmlns="http://www.w3.org/2000/svg">
-                <g fill="none" fill-rule="evenodd">
-                    <circle fill="#D87D4A" cx="32" cy="32" r="32" />
-                    <path stroke="#FFF" stroke-width="4" d="m20.754 33.333 6.751 6.751 15.804-15.803" />
-                </g>
+              <g fill="none" fill-rule="evenodd">
+                <circle fill="#D87D4A" cx="32" cy="32" r="32" />
+                <path
+                  stroke="#FFF"
+                  stroke-width="4"
+                  d="m20.754 33.333 6.751 6.751 15.804-15.803"
+                />
+              </g>
             </svg>
-            <h3 className="confirmation-h3 checkout-h3">THANK YOU FOR YOUR ORDER</h3>
-            <p className="confirmation-p">You will receive an email confirmation shortly.</p>
+            <h3 className="confirmation-h3 checkout-h3">
+              THANK YOU FOR YOUR ORDER
+            </h3>
+            <p className="confirmation-p">
+              You will receive an email confirmation shortly.
+            </p>
             <div className="confirmation-container-total">
               <h5 className="confirmation-h5">GRAND TOTAL</h5>
               <h5 className="confirmation-h5 confirmation-total">$ 5,446</h5>
             </div>
-            <Link to="/home" className="summary-button2 button-1">BACK TO HOME</Link>
+            <Link to="/home" className="summary-button2 button-1">
+              BACK TO HOME
+            </Link>
           </div>
-      </div>
+        </div>
       )}
     </div>
   );

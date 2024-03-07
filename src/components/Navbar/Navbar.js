@@ -211,15 +211,7 @@ function Navbar({ onPageChange, cartItems, setCartItems }) {
             </span>
           </div>
           <Link
-            to={{
-              pathname: "/checkout",
-              state: {
-                additionalInfo: {
-                  totalQuantity: calculateTotalQuantity(),
-                  totalPrice: calculateTotalPrice(),
-                },
-              },
-            }}
+            to="/checkout"
             onClick={closeCart}
             className="cart-button2 button-1"
           >
