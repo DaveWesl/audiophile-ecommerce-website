@@ -7,7 +7,7 @@ function Footer() {
     <footer>
         <div className="footer-container">
             <a className="footer-brand" href="/">
-              <img src="/assets/shared/desktop/logo.svg" alt="audiophile"/>
+              <img src={process.env.PUBLIC_URL + "/assets/shared/desktop/logo.svg"} alt="audiophile"/>
             </a>
             <div className='footer-links'>
                 <ul>

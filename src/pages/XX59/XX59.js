@@ -14,7 +14,7 @@ function XX59({ onAddToCart }) {
             
             <Products
                 id='xx59' 
-                imgSrc='/assets/shared/desktop/image-xx59-headphones.jpg'
+                imgSrc={process.env.PUBLIC_URL + '/assets/shared/desktop/image-xx59-headphones.jpg'}
                 heading='XX59 Headphones'
                 description='Enjoy your audio almost anywhere and customize it to your specific tastes with the XX59 headphones. The stylish yet durable versatile wireless headset is a brilliant companion at home or on the move.'
                 price='$ 899'
@@ -37,18 +37,18 @@ function XX59({ onAddToCart }) {
             />
 
             <Images 
-                imagesImg1='/assets/product-xx59-headphones/desktop/image-gallery-1.jpg'
-                imagesImg2='/assets/product-xx59-headphones/desktop/image-gallery-2.jpg'
-                imagesImg3='/assets/product-xx59-headphones/desktop/image-gallery-3.jpg'
+                imagesImg1={process.env.PUBLIC_URL + '/assets/product-xx59-headphones/desktop/image-gallery-1.jpg'}
+                imagesImg2={process.env.PUBLIC_URL + '/assets/product-xx59-headphones/desktop/image-gallery-2.jpg'}
+                imagesImg3={process.env.PUBLIC_URL + '/assets/product-xx59-headphones/desktop/image-gallery-3.jpg'}
                 imagesImgAlt1='women laughing with headphones'
                 imagesImgAlt2='Headphones over some books'
                 imagesImgAlt3='Headphones XX59'
             />
 
             <Youmayalso 
-                YoumayalsoImg1='/assets/shared/desktop/image-xx99-mark-two-headphones.jpg'
-                YoumayalsoImg2='/assets/shared/desktop/image-xx99-mark-one-headphones.jpg'
-                YoumayalsoImg3='/assets/shared/desktop/image-zx9-speaker.jpg' 
+                YoumayalsoImg1={process.env.PUBLIC_URL + '/assets/shared/desktop/image-xx99-mark-two-headphones.jpg'}
+                YoumayalsoImg2={process.env.PUBLIC_URL + '/assets/shared/desktop/image-xx99-mark-one-headphones.jpg'}
+                YoumayalsoImg3={process.env.PUBLIC_URL + '/assets/shared/desktop/image-zx9-speaker.jpg' }
                 YoumayalsoImgAlt1='mark two headphones'
                 YoumayalsoImgAlt2='mark one headphones'
                 YoumayalsoImgAlt3='zx9 speaker'   

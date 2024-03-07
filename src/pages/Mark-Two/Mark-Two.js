@@ -15,7 +15,7 @@ function MarkTwo({onAddToCart}) {
             <Products
                 onAddToCart={onAddToCart}
                 id='marktwo'
-              imgSrc='/assets/shared/desktop/image-xx99-mark-two-headphones.jpg'
+              imgSrc={process.env.PUBLIC_URL + '/assets/shared/desktop/image-xx99-mark-two-headphones.jpg'}
               overline='NEW PRODUCT'
               heading='XX99 Mark II Headphones'
               description='The new XX99 Mark II headphones is the pinnacle of pristine audio. It redefines your premium headphone experience by reproducing the balanced depth and precision of studio-quality sound.'
@@ -39,18 +39,18 @@ function MarkTwo({onAddToCart}) {
             />
 
             <Images 
-                imagesImg1='/assets/product-xx99-mark-two-headphones\desktop/image-gallery-1.jpg'
-                imagesImg2='/assets/product-xx99-mark-two-headphones\desktop/image-gallery-2.jpg'
-                imagesImg3='/assets/product-xx99-mark-two-headphones\desktop/image-gallery-3.jpg'
+                imagesImg1={process.env.PUBLIC_URL + '/assets/product-xx99-mark-two-headphones/desktop/image-gallery-1.jpg'}
+                imagesImg2={process.env.PUBLIC_URL + '/assets/product-xx99-mark-two-headphones/desktop/image-gallery-2.jpg'}
+                imagesImg3={process.env.PUBLIC_URL + '/assets/product-xx99-mark-two-headphones/desktop/image-gallery-3.jpg'}
                 imagesImgAlt1='men hearing music'
                 imagesImgAlt2='Headphones on table'
                 imagesImgAlt3='Headphones Mark 2'
             />
 
             <Youmayalso 
-                YoumayalsoImg1='/assets/shared/desktop/image-xx99-mark-one-headphones.jpg'
-                YoumayalsoImg2='/assets/shared/desktop/image-xx59-headphones.jpg'
-                YoumayalsoImg3='/assets/shared/desktop/image-zx9-speaker.jpg' 
+                YoumayalsoImg1={process.env.PUBLIC_URL + '/assets/shared/desktop/image-xx99-mark-one-headphones.jpg'}
+                YoumayalsoImg2={process.env.PUBLIC_URL + '/assets/shared/desktop/image-xx59-headphones.jpg'}
+                YoumayalsoImg3={process.env.PUBLIC_URL + '/assets/shared/desktop/image-zx9-speaker.jpg' }
                 YoumayalsoImgAlt1='mark one headphones'
                 YoumayalsoImgAlt2='xx59 headphones'
                 YoumayalsoImgAlt3='zx9 speaker'   

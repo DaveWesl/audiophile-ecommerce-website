@@ -15,7 +15,7 @@ function MarkOne({onAddToCart}) {
             <Products
                 onAddToCart={onAddToCart}
                 id='markone'
-              imgSrc='/assets/shared/desktop/image-xx99-mark-one-headphones.jpg'
+              imgSrc={process.env.PUBLIC_URL + '/assets/shared/desktop/image-xx99-mark-one-headphones.jpg'}
               heading='XX99 Mark I Headphones'
               description='As the gold standard for headphones, the classic XX99 Mark I offers detailed and accurate audio reproduction for audiophiles, mixing engineers, and music aficionados alike in studios and on the go.'
               price='$ 1,750'
@@ -37,18 +37,18 @@ function MarkOne({onAddToCart}) {
             />
 
             <Images 
-                imagesImg1='/assets/product-xx99-mark-one-headphones/desktop/image-gallery-1.jpg'
-                imagesImg2='/assets/product-xx99-mark-one-headphones\desktop/image-gallery-2.jpg'
-                imagesImg3='/assets/product-xx99-mark-one-headphones\desktop/image-gallery-3.jpg'
+                imagesImg1={process.env.PUBLIC_URL + '/assets/product-xx99-mark-one-headphones/desktop/image-gallery-1.jpg'}
+                imagesImg2={process.env.PUBLIC_URL + '/assets/product-xx99-mark-one-headphones/desktop/image-gallery-2.jpg'}
+                imagesImg3={process.env.PUBLIC_URL + '/assets/product-xx99-mark-one-headphones/desktop/image-gallery-3.jpg'}
                 imagesImgAlt1='microfone with headphones'
                 imagesImgAlt2='Headphones on table'
                 imagesImgAlt3='Headphones Mark 1'
             />
 
             <Youmayalso 
-                YoumayalsoImg1='/assets/shared/desktop/image-xx99-mark-two-headphones.jpg'
-                YoumayalsoImg2='/assets/shared/desktop/image-xx59-headphones.jpg'
-                YoumayalsoImg3='/assets/shared/desktop/image-zx9-speaker.jpg' 
+                YoumayalsoImg1={process.env.PUBLIC_URL + '/assets/shared/desktop/image-xx99-mark-two-headphones.jpg'}
+                YoumayalsoImg2={process.env.PUBLIC_URL + '/assets/shared/desktop/image-xx59-headphones.jpg'}
+                YoumayalsoImg3={process.env.PUBLIC_URL + '/assets/shared/desktop/image-zx9-speaker.jpg' }
                 YoumayalsoImgAlt1='mark two headphones'
                 YoumayalsoImgAlt2='xx59 headphones'
                 YoumayalsoImgAlt3='zx9 speaker'   

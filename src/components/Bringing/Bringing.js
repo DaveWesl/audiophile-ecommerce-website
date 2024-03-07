@@ -35,10 +35,10 @@ function Bringing() {
             <img className="img-guy" 
             src={
                 windowWidth < 591
-                  ? '/assets/shared/mobile/image-best-gear.jpg'
+                  ? process.env.PUBLIC_URL + '/assets/shared/mobile/image-best-gear.jpg'
                   : windowWidth <= 1100
-                  ? '/assets/shared/tablet/image-best-gear.jpg'
-                  : '/assets/shared/desktop/image-best-gear.jpg'
+                  ? process.env.PUBLIC_URL + '/assets/shared/tablet/image-best-gear.jpg'
+                  : process.env.PUBLIC_URL + '/assets/shared/desktop/image-best-gear.jpg'
               } 
             alt="guy hearing music"/>
         </div>

@@ -16,7 +16,7 @@ function Home() {
             <div className="oval-copy-1 oval-copy"></div>
             <div className="oval-copy-2 oval-copy"></div>
             <div className="oval-copy-3 oval-copy"></div>
-            <img className="home-img-zx9 home-img" src="/assets/home/desktop/image-speaker-zx9.png" alt="ZX9 Speaker"/>
+            <img className="home-img-zx9 home-img" src={process.env.PUBLIC_URL + "/assets/home/desktop/image-speaker-zx9.png"} alt="ZX9 Speaker"/>
           </div>
           <div className="home-text-zx9">
             <h1 className="home-h1">ZX9 SPEAKER</h1>

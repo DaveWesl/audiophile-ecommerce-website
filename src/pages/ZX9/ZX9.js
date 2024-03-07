@@ -15,7 +15,7 @@ function ZX9({onAddToCart}) {
             <Products
                 onAddToCart={onAddToCart}
                 id='zx9'
-              imgSrc='/assets/shared/desktop/image-zx9-speaker.jpg'
+              imgSrc={process.env.PUBLIC_URL + '/assets/shared/desktop/image-zx9-speaker.jpg'}
               overline='NEW PRODUCT'
               heading='ZX9 SPEAKER'
               description='Upgrade your sound system with the all new ZX9 active speaker. It’s a bookshelf speaker system that offers truly wireless connectivity -- creating new possibilities for more pleasing and practical audio setups.'
@@ -39,18 +39,18 @@ function ZX9({onAddToCart}) {
             />
 
             <Images 
-                imagesImg1='/assets/product-zx9-speaker/desktop/image-gallery-1.jpg'
-                imagesImg2='/assets/product-zx9-speaker/desktop/image-gallery-2.jpg'
-                imagesImg3='/assets/product-zx9-speaker/desktop/image-gallery-3.jpg'
+                imagesImg1={process.env.PUBLIC_URL + '/assets/product-zx9-speaker/desktop/image-gallery-1.jpg'}
+                imagesImg2={process.env.PUBLIC_URL + '/assets/product-zx9-speaker/desktop/image-gallery-2.jpg'}
+                imagesImg3={process.env.PUBLIC_URL + '/assets/product-zx9-speaker/desktop/image-gallery-3.jpg'}
                 imagesImgAlt1='speaker'
                 imagesImgAlt2='speaker in use in a home'
                 imagesImgAlt3='2 Speakers ZX9'
             />
 
             <Youmayalso 
-                YoumayalsoImg1='/assets/shared/desktop/image-zx7-speaker.jpg'
-                YoumayalsoImg2='/assets/shared/desktop/image-xx99-mark-one-headphones.jpg'
-                YoumayalsoImg3='/assets/shared/desktop/image-xx59-headphones.jpg' 
+                YoumayalsoImg1={process.env.PUBLIC_URL + '/assets/shared/desktop/image-zx7-speaker.jpg'}
+                YoumayalsoImg2={process.env.PUBLIC_URL + '/assets/shared/desktop/image-xx99-mark-one-headphones.jpg'}
+                YoumayalsoImg3={process.env.PUBLIC_URL + '/assets/shared/desktop/image-xx59-headphones.jpg' }
                 YoumayalsoImgAlt1='ZX7 Speaker'
                 YoumayalsoImgAlt2='XX99 Mark One headphones'
                 YoumayalsoImgAlt3='XX59 headphones'   

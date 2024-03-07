@@ -14,7 +14,7 @@ function YX1({ onAddToCart }) {
             
             <Products
                 id='yx1'
-                imgSrc='/assets/product-yx1-earphones/desktop/image-product.jpg'
+                imgSrc={process.env.PUBLIC_URL + '/assets/product-yx1-earphones/desktop/image-product.jpg'}
                 overline='NEW PRODUCT'
                 heading='YX1 WIRELESS EARPHONES'
                 description='Tailor your listening experience with bespoke dynamic drivers from the new YX1 Wireless Earphones. Enjoy incredible high-fidelity sound even in noisy environments with its active noise cancellation feature.'
@@ -39,18 +39,18 @@ function YX1({ onAddToCart }) {
             />
 
             <Images 
-                imagesImg1='/assets/product-yx1-earphones/desktop/image-gallery-1.jpg'
-                imagesImg2='/assets/product-yx1-earphones/desktop/image-gallery-2.jpg'
-                imagesImg3='/assets/product-yx1-earphones/desktop/image-gallery-3.jpg'
+                imagesImg1={process.env.PUBLIC_URL + '/assets/product-yx1-earphones/desktop/image-gallery-1.jpg'}
+                imagesImg2={process.env.PUBLIC_URL + '/assets/product-yx1-earphones/desktop/image-gallery-2.jpg'}
+                imagesImg3={process.env.PUBLIC_URL + '/assets/product-yx1-earphones/desktop/image-gallery-3.jpg'}
                 imagesImgAlt1='2 earphones on a black background'
                 imagesImgAlt2='2 earphones with there case'
                 imagesImgAlt3='2 earphones inside there case'
             />
 
             <Youmayalso 
-                YoumayalsoImg1='/assets/shared/desktop/image-xx99-mark-one-headphones.jpg'
-                YoumayalsoImg2='/assets/shared/desktop/image-xx59-headphones.jpg' 
-                YoumayalsoImg3='/assets/shared/desktop/image-zx9-speaker.jpg'
+                YoumayalsoImg1={process.env.PUBLIC_URL + '/assets/shared/desktop/image-xx99-mark-one-headphones.jpg'}
+                YoumayalsoImg2={process.env.PUBLIC_URL + '/assets/shared/desktop/image-xx59-headphones.jpg' }
+                YoumayalsoImg3={process.env.PUBLIC_URL + '/assets/shared/desktop/image-zx9-speaker.jpg'}
                 YoumayalsoImgAlt1='XX99 Mark I'
                 YoumayalsoImgAlt2='XX59'
                 YoumayalsoImgAlt3='ZX9 Speaker'   

@@ -12,7 +12,7 @@ function Earphones() {
       <Header pageHeader="EARPHONES" />
 
       <Products
-        imgSrc='/assets/product-yx1-earphones/desktop/image-category-page-preview.jpg'
+        imgSrc={process.env.PUBLIC_URL + '/assets/product-yx1-earphones/desktop/image-category-page-preview.jpg'}
         overline='NEW PRODUCT'
         heading='YX1 WIRELESS EARPHONES'
         description='Tailor your listening experience with bespoke dynamic drivers from the new YX1 Wireless Earphones. Enjoy incredible high-fidelity sound even in noisy environments with its active noise cancellation feature.'
