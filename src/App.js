@@ -21,17 +21,15 @@ function App() {
   const [cartItems, setCartItems] = useState([]);
 
   const handleAddToCart = (productInfo) => {
-    // Prüfe, ob das Produkt bereits im Warenkorb ist
     const isProductInCart = cartItems.some((item) => item.id === productInfo.id);
 
     if (!isProductInCart) {
-      // Füge das Produkt zum Warenkorb hinzu, nur wenn es nicht vorhanden ist
       setCartItems((prevCartItems) => [...prevCartItems, { ...productInfo, cartItemId: productInfo.id }]);
     }
   };
 
   return (
-    <Router>
+    <Router basename="/audiophile-ecommerce-website">
       <ScrollToTop />
       <div className="App">
         <Navbar cartItems={cartItems} setCartItems={setCartItems}/>
