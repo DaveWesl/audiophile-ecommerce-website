@@ -82,7 +82,7 @@ function Navbar({ onPageChange, cartItems, setCartItems }) {
             >
               <img
                 src="/assets/shared/tablet/icon-hamburger.svg"
-                alt="audiophile"
+                alt="menu logo"
                 width="30"
                 height="24"
               />
