@@ -81,7 +81,7 @@ function Navbar({ onPageChange, cartItems, setCartItems }) {
               onClick={toggleMenu} /* eslint-disable jsx-a11y/anchor-is-valid */
             >
               <img
-                src="/assets/shared/tablet/icon-hamburger.svg"
+                src={process.env.PUBLIC_URL + "/assets/shared/tablet/icon-hamburger.svg"}
                 alt="menu logo"
                 width="30"
                 height="24"
@@ -104,7 +104,7 @@ function Navbar({ onPageChange, cartItems, setCartItems }) {
           </div>
           <div className="container-logo">
             <Link to="/" className="navbar-brand">
-              <img src="/assets/shared/desktop/logo.svg" alt="audiophile" />
+              <img src={process.env.PUBLIC_URL + "/assets/shared/desktop/logo.svg"} alt="audiophile" />
             </Link>
           </div>
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
