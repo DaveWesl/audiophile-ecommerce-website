@@ -62,6 +62,10 @@ function Checkout({ cartItems, setCartItems }) {
     setCashOnDeliveryActive(true);
   };
 
+  const handleBackToHome = () => {
+    setCartItems([]);
+  };
+
   return (
     <div className="checkout confirmation-parent">
       <div className="checkout-all">
@@ -346,9 +350,9 @@ function Checkout({ cartItems, setCartItems }) {
             </p>
             <div className="confirmation-container-total">
               <h5 className="confirmation-h5">GRAND TOTAL</h5>
-              <h5 className="confirmation-h5 confirmation-total">$ 5,446</h5>
+              <h5 className="confirmation-h5 confirmation-total">$ {grandTotal.toFixed(2)}</h5>
             </div>
-            <Link to="/home" className="summary-button2 button-1">
+            <Link to="/" className="summary-button2 button-1" onClick={handleBackToHome}>
               BACK TO HOME
             </Link>
           </div>
