@@ -41,7 +41,8 @@
 
 .confirmation-h5 {
     color: rgba(255, 255, 255, 0.6);
-    margin: 2rem;
+    font-size: 1rem;
+    margin: 1rem;
 }
 
 .confirmation-total {
@@ -53,14 +54,19 @@
     .confirmation-container {
         align-items: center;
         text-align: center;
+        padding: 1rem;
     }
 
     .confirmation-h3 {
-        font-size: 1.5rem;
+        font-size: 1.3rem;
+    }
+
+    .confirmation-container-total {
+        margin: 1.3rem 0;
     }
 
     .confirmation-h5 {
-        font-size: 1rem;
-        margin: 1rem 0;
+        font-size: 0.8rem;
+        margin: 0.5rem 0;
     }
 }

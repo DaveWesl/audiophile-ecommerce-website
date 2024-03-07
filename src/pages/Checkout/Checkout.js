@@ -293,7 +293,7 @@ function Checkout({ cartItems, setCartItems }) {
                   <div className="summary-h7">{item.heading}</div>
                   <p className="summary-price summary-p">{item.price}</p>
                 </div>
-                <p className="summary-p summary-quantity">x{item.quantity}</p>
+                <p className="summary-p summary-quantity">x {item.quantity}</p>
               </div>
             ))}
 

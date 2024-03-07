@@ -163,7 +163,8 @@
 .summary-product1 {
     display: flex;
     align-items: center;
-    grid-column: span 2;
+    grid-column: span 3;
+    width: 100%;
 }
 
 .summary-img {
@@ -171,9 +172,18 @@
     margin-right: 1rem;
 }
 
+.summary-h7 {
+    width: 60%;
+}
+
 .summary-quantity {
     display: flex;
+    flex-direction: column;
     justify-content: flex-end;
+    align-content: center;
+    margin-left: auto;
+    font-size: 1rem;
+    font-weight: bold;
 }
 
 .summary-h7,
